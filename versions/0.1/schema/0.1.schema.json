@@ -2,48 +2,31 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "session": {
+    "event": {
       "type": "string"
     },
-    "events": {
-      "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string"
-            },
-            "payload": {
-              "type": "object",
-              "properties": {
-                "timestamp": {
-                  "type": "integer"
-                },
-                "currentTime": {
-                  "type": "integer"
-                },
-                "duration": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "timestamp",
-                "currentTime",
-                "duration"
-              ]
-            }
-          },
-          "required": [
-            "type",
-            "payload"
-          ]
-        }
-      ]
+    "sessionId": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "integer"
+    },
+    "playhead": {
+      "type": "integer"
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "payload": {
+      "type": "object"
     }
   },
   "required": [
-    "session",
-    "events"
+    "event",
+    "sessionId",
+    "timestamp",
+    "playhead",
+    "duration",
+    "payload"
   ]
 }
