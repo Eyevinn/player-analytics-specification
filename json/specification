@@ -7,7 +7,1113 @@
 	"originalName": "",
 	"children": [
 		{
-			"id": 9,
+			"id": 1,
+			"name": "PlayerAnalyticsClientModule",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {},
+			"children": [
+				{
+					"id": 38,
+					"name": "bitrateChanged",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 33,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 39,
+							"name": "bitrateChanged",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 40,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 58,
+										"name": "TBitrateChangedEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 29,
+					"name": "buffered",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 30,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 30,
+							"name": "buffered",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 31,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 62,
+										"name": "TBufferedEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 26,
+					"name": "buffering",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 29,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 27,
+							"name": "buffering",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 28,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 65,
+										"name": "TBufferingEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 41,
+					"name": "error",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 34,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 42,
+							"name": "error",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 43,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 74,
+										"name": "TErrorEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"name": "heartbeat",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 22,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 6,
+							"name": "heartbeat",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 7,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 78,
+										"name": "THeartbeatEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 2,
+					"name": "init",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 21,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 3,
+							"name": "init",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 4,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 93,
+										"name": "TInitEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 99,
+										"name": "TInitResponse"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				},
+				{
+					"id": 11,
+					"name": "loaded",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 24,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 12,
+							"name": "loaded",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 13,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 103,
+										"name": "TLoadedEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 8,
+					"name": "loading",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 23,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 9,
+							"name": "loading",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 10,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 106,
+										"name": "TLoadingEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 20,
+					"name": "pause",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 27,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 21,
+							"name": "pause",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 22,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 109,
+										"name": "TPauseEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 14,
+					"name": "play",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 25,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 15,
+							"name": "play",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 16,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 112,
+										"name": "TPlayEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 17,
+					"name": "playing",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 26,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 18,
+							"name": "playing",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 19,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 115,
+										"name": "TPlayingEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 23,
+					"name": "resume",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 28,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 24,
+							"name": "resume",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 25,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 118,
+										"name": "TResumeEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 35,
+					"name": "seeked",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 32,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 36,
+							"name": "seeked",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 37,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 121,
+										"name": "TSeekedEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 32,
+					"name": "seeking",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 31,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 33,
+							"name": "seeking",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 34,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 124,
+										"name": "TSeekingEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 47,
+					"name": "stopped",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 36,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 48,
+							"name": "stopped",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 49,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 127,
+										"name": "TStoppedEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 44,
+					"name": "warning",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 35,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 45,
+							"name": "warning",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 46,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 138,
+										"name": "TWarningEvent"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						38,
+						29,
+						26,
+						41,
+						5,
+						2,
+						11,
+						8,
+						20,
+						14,
+						17,
+						23,
+						35,
+						32,
+						47,
+						44
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 20,
+					"character": 17
+				}
+			]
+		},
+		{
+			"id": 150,
+			"name": "Seconds",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/base.d.ts",
+					"line": 3,
+					"character": 5
+				}
+			],
+			"type": {
+				"type": "intrinsic",
+				"name": "number"
+			}
+		},
+		{
+			"id": 152,
+			"name": "TBaseEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/base.d.ts",
+					"line": 20,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 153,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 156,
+							"name": "duration",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "event/base.d.ts",
+									"line": 23,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 155,
+							"name": "playhead",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "event/base.d.ts",
+									"line": 22,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 154,
+							"name": "timestamp",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "event/base.d.ts",
+									"line": 21,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 148,
+								"name": "UTCTimestamp"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								156,
+								155,
+								154
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "event/base.d.ts",
+							"line": 20,
+							"character": 25
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 145,
+			"name": "TBatchEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/batch.d.ts",
+					"line": 40,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"id": 152,
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 146,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 147,
+									"name": "payload",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/batch.d.ts",
+											"line": 41,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 142,
+										"name": "TBatchEventPayload"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										147
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/batch.d.ts",
+									"line": 40,
+									"character": 39
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 142,
+			"name": "TBatchEventPayload",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/batch.d.ts",
+					"line": 19,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 143,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 144,
+							"name": "event",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "event/batch.d.ts",
+									"line": 20,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "union",
+									"types": [
+										{
+											"type": "reference",
+											"id": 93,
+											"name": "TInitEvent"
+										},
+										{
+											"type": "reference",
+											"id": 78,
+											"name": "THeartbeatEvent"
+										},
+										{
+											"type": "reference",
+											"id": 106,
+											"name": "TLoadingEvent"
+										},
+										{
+											"type": "reference",
+											"id": 103,
+											"name": "TLoadedEvent"
+										},
+										{
+											"type": "reference",
+											"id": 112,
+											"name": "TPlayEvent"
+										},
+										{
+											"type": "reference",
+											"id": 115,
+											"name": "TPlayingEvent"
+										},
+										{
+											"type": "reference",
+											"id": 109,
+											"name": "TPauseEvent"
+										},
+										{
+											"type": "reference",
+											"id": 118,
+											"name": "TResumeEvent"
+										},
+										{
+											"type": "reference",
+											"id": 65,
+											"name": "TBufferingEvent"
+										},
+										{
+											"type": "reference",
+											"id": 62,
+											"name": "TBufferedEvent"
+										},
+										{
+											"type": "reference",
+											"id": 124,
+											"name": "TSeekingEvent"
+										},
+										{
+											"type": "reference",
+											"id": 121,
+											"name": "TSeekedEvent"
+										},
+										{
+											"type": "reference",
+											"id": 58,
+											"name": "TBitrateChangedEvent"
+										},
+										{
+											"type": "reference",
+											"id": 74,
+											"name": "TErrorEvent"
+										},
+										{
+											"type": "reference",
+											"id": 138,
+											"name": "TWarningEvent"
+										},
+										{
+											"type": "reference",
+											"id": 127,
+											"name": "TStoppedEvent"
+										}
+									]
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								144
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "event/batch.d.ts",
+							"line": 19,
+							"character": 33
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 151,
+			"name": "TBatchedEventType",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/base.d.ts",
+					"line": 5,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "literal",
+						"value": "pas.loading"
+					},
+					{
+						"type": "literal",
+						"value": "pas.loaded"
+					},
+					{
+						"type": "literal",
+						"value": "pas.play"
+					},
+					{
+						"type": "literal",
+						"value": "pas.playing"
+					},
+					{
+						"type": "literal",
+						"value": "pas.pause"
+					},
+					{
+						"type": "literal",
+						"value": "pas.resume"
+					},
+					{
+						"type": "literal",
+						"value": "pas.buffering"
+					},
+					{
+						"type": "literal",
+						"value": "pas.buffered"
+					},
+					{
+						"type": "literal",
+						"value": "pas.seeking"
+					},
+					{
+						"type": "literal",
+						"value": "pas.seeked"
+					},
+					{
+						"type": "literal",
+						"value": "pas.bitrate_changed"
+					},
+					{
+						"type": "literal",
+						"value": "pas.error"
+					},
+					{
+						"type": "literal",
+						"value": "pas.warning"
+					}
+				]
+			}
+		},
+		{
+			"id": 58,
 			"name": "TBitrateChangedEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -24,19 +1130,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 10,
+							"id": 59,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 11,
+									"id": 60,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -54,7 +1161,7 @@
 									}
 								},
 								{
-									"id": 12,
+									"id": 61,
 									"name": "payload",
 									"kind": 1024,
 									"kindString": "Property",
@@ -68,7 +1175,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 2,
+										"id": 51,
 										"name": "TBitrateChangedEventPayload"
 									}
 								}
@@ -78,8 +1185,8 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										11,
-										12
+										60,
+										61
 									]
 								}
 							],
@@ -96,7 +1203,7 @@
 			}
 		},
 		{
-			"id": 2,
+			"id": 51,
 			"name": "TBitrateChangedEventPayload",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -111,14 +1218,14 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 3,
+					"id": 52,
 					"name": "__type",
 					"kind": 65536,
 					"kindString": "Type literal",
 					"flags": {},
 					"children": [
 						{
-							"id": 8,
+							"id": 57,
 							"name": "audioBitrate",
 							"kind": 1024,
 							"kindString": "Property",
@@ -138,7 +1245,7 @@
 							}
 						},
 						{
-							"id": 4,
+							"id": 53,
 							"name": "bitrate",
 							"kind": 1024,
 							"kindString": "Property",
@@ -156,7 +1263,7 @@
 							}
 						},
 						{
-							"id": 6,
+							"id": 55,
 							"name": "height",
 							"kind": 1024,
 							"kindString": "Property",
@@ -176,7 +1283,7 @@
 							}
 						},
 						{
-							"id": 7,
+							"id": 56,
 							"name": "videoBitrate",
 							"kind": 1024,
 							"kindString": "Property",
@@ -196,7 +1303,7 @@
 							}
 						},
 						{
-							"id": 5,
+							"id": 54,
 							"name": "width",
 							"kind": 1024,
 							"kindString": "Property",
@@ -221,11 +1328,11 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								8,
-								4,
-								6,
-								7,
-								5
+								57,
+								53,
+								55,
+								56,
+								54
 							]
 						}
 					],
@@ -240,7 +1347,7 @@
 			}
 		},
 		{
-			"id": 13,
+			"id": 62,
 			"name": "TBufferedEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -257,19 +1364,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 14,
+							"id": 63,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 15,
+									"id": 64,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -292,7 +1400,7 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										15
+										64
 									]
 								}
 							],
@@ -309,7 +1417,7 @@
 			}
 		},
 		{
-			"id": 16,
+			"id": 65,
 			"name": "TBufferingEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -326,19 +1434,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 17,
+							"id": 66,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 18,
+									"id": 67,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -361,7 +1470,7 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										18
+										67
 									]
 								}
 							],
@@ -378,7 +1487,7 @@
 			}
 		},
 		{
-			"id": 25,
+			"id": 74,
 			"name": "TErrorEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -395,19 +1504,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 26,
+							"id": 75,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 27,
+									"id": 76,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -425,7 +1535,7 @@
 									}
 								},
 								{
-									"id": 28,
+									"id": 77,
 									"name": "payload",
 									"kind": 1024,
 									"kindString": "Property",
@@ -439,7 +1549,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 19,
+										"id": 68,
 										"name": "TErrorEventPayload"
 									}
 								}
@@ -449,8 +1559,8 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										27,
-										28
+										76,
+										77
 									]
 								}
 							],
@@ -467,7 +1577,7 @@
 			}
 		},
 		{
-			"id": 19,
+			"id": 68,
 			"name": "TErrorEventPayload",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -482,14 +1592,14 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 20,
+					"id": 69,
 					"name": "__type",
 					"kind": 65536,
 					"kindString": "Type literal",
 					"flags": {},
 					"children": [
 						{
-							"id": 21,
+							"id": 70,
 							"name": "category",
 							"kind": 1024,
 							"kindString": "Property",
@@ -509,7 +1619,7 @@
 							}
 						},
 						{
-							"id": 22,
+							"id": 71,
 							"name": "code",
 							"kind": 1024,
 							"kindString": "Property",
@@ -527,7 +1637,7 @@
 							}
 						},
 						{
-							"id": 24,
+							"id": 73,
 							"name": "data",
 							"kind": 1024,
 							"kindString": "Property",
@@ -557,7 +1667,7 @@
 							}
 						},
 						{
-							"id": 23,
+							"id": 72,
 							"name": "message",
 							"kind": 1024,
 							"kindString": "Property",
@@ -582,10 +1692,10 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								21,
-								22,
-								24,
-								23
+								70,
+								71,
+								73,
+								72
 							]
 						}
 					],
@@ -600,7 +1710,7 @@
 			}
 		},
 		{
-			"id": 29,
+			"id": 78,
 			"name": "THeartbeatEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -617,19 +1727,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 145,
 						"name": "TBatchEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 30,
+							"id": 79,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 31,
+									"id": 80,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -647,7 +1758,7 @@
 									}
 								},
 								{
-									"id": 33,
+									"id": 82,
 									"name": "payload",
 									"kind": 1024,
 									"kindString": "Property",
@@ -661,11 +1772,12 @@
 									],
 									"type": {
 										"type": "reference",
+										"id": 142,
 										"name": "TBatchEventPayload"
 									}
 								},
 								{
-									"id": 32,
+									"id": 81,
 									"name": "sessionId",
 									"kind": 1024,
 									"kindString": "Property",
@@ -681,6 +1793,7 @@
 									],
 									"type": {
 										"type": "reference",
+										"id": 149,
 										"name": "UUID"
 									}
 								}
@@ -690,9 +1803,9 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										31,
-										33,
-										32
+										80,
+										82,
+										81
 									]
 								}
 							],
@@ -709,7 +1822,7 @@
 			}
 		},
 		{
-			"id": 44,
+			"id": 93,
 			"name": "TInitEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -726,19 +1839,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 45,
+							"id": 94,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 46,
+									"id": 95,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -756,7 +1870,7 @@
 									}
 								},
 								{
-									"id": 48,
+									"id": 97,
 									"name": "heartbeatInterval",
 									"kind": 1024,
 									"kindString": "Property",
@@ -772,11 +1886,12 @@
 									],
 									"type": {
 										"type": "reference",
+										"id": 150,
 										"name": "Seconds"
 									}
 								},
 								{
-									"id": 49,
+									"id": 98,
 									"name": "payload",
 									"kind": 1024,
 									"kindString": "Property",
@@ -790,12 +1905,12 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 34,
+										"id": 83,
 										"name": "TInitEventPayload"
 									}
 								},
 								{
-									"id": 47,
+									"id": 96,
 									"name": "sessionId",
 									"kind": 1024,
 									"kindString": "Property",
@@ -811,6 +1926,7 @@
 									],
 									"type": {
 										"type": "reference",
+										"id": 149,
 										"name": "UUID"
 									}
 								}
@@ -820,10 +1936,10 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										46,
-										48,
-										49,
-										47
+										95,
+										97,
+										98,
+										96
 									]
 								}
 							],
@@ -840,7 +1956,7 @@
 			}
 		},
 		{
-			"id": 34,
+			"id": 83,
 			"name": "TInitEventPayload",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -872,14 +1988,14 @@
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 35,
+							"id": 84,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 37,
+									"id": 86,
 									"name": "contentId",
 									"kind": 1024,
 									"kindString": "Property",
@@ -897,7 +2013,7 @@
 									}
 								},
 								{
-									"id": 38,
+									"id": 87,
 									"name": "contentUrl",
 									"kind": 1024,
 									"kindString": "Property",
@@ -915,7 +2031,7 @@
 									}
 								},
 								{
-									"id": 41,
+									"id": 90,
 									"name": "deviceId",
 									"kind": 1024,
 									"kindString": "Property",
@@ -935,7 +2051,7 @@
 									}
 								},
 								{
-									"id": 42,
+									"id": 91,
 									"name": "deviceModel",
 									"kind": 1024,
 									"kindString": "Property",
@@ -955,7 +2071,7 @@
 									}
 								},
 								{
-									"id": 43,
+									"id": 92,
 									"name": "deviceType",
 									"kind": 1024,
 									"kindString": "Property",
@@ -975,7 +2091,7 @@
 									}
 								},
 								{
-									"id": 39,
+									"id": 88,
 									"name": "drmType",
 									"kind": 1024,
 									"kindString": "Property",
@@ -995,7 +2111,7 @@
 									}
 								},
 								{
-									"id": 36,
+									"id": 85,
 									"name": "live",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1013,7 +2129,7 @@
 									}
 								},
 								{
-									"id": 40,
+									"id": 89,
 									"name": "userId",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1038,14 +2154,14 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										37,
-										38,
-										41,
-										42,
-										43,
-										39,
-										36,
-										40
+										86,
+										87,
+										90,
+										91,
+										92,
+										88,
+										85,
+										89
 									]
 								}
 							],
@@ -1062,7 +2178,7 @@
 			}
 		},
 		{
-			"id": 50,
+			"id": 99,
 			"name": "TInitResponse",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1077,14 +2193,14 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 51,
+					"id": 100,
 					"name": "__type",
 					"kind": 65536,
 					"kindString": "Type literal",
 					"flags": {},
 					"children": [
 						{
-							"id": 53,
+							"id": 102,
 							"name": "heartbeatInterval",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1098,11 +2214,12 @@
 							],
 							"type": {
 								"type": "reference",
+								"id": 150,
 								"name": "Seconds"
 							}
 						},
 						{
-							"id": 52,
+							"id": 101,
 							"name": "sessionId",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1116,6 +2233,7 @@
 							],
 							"type": {
 								"type": "reference",
+								"id": 149,
 								"name": "UUID"
 							}
 						}
@@ -1125,8 +2243,8 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								53,
-								52
+								102,
+								101
 							]
 						}
 					],
@@ -1141,7 +2259,7 @@
 			}
 		},
 		{
-			"id": 54,
+			"id": 103,
 			"name": "TLoadedEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1158,19 +2276,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 55,
+							"id": 104,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 56,
+									"id": 105,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1193,7 +2312,7 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										56
+										105
 									]
 								}
 							],
@@ -1210,7 +2329,7 @@
 			}
 		},
 		{
-			"id": 57,
+			"id": 106,
 			"name": "TLoadingEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1227,19 +2346,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 58,
+							"id": 107,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 59,
+									"id": 108,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1262,7 +2382,7 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										59
+										108
 									]
 								}
 							],
@@ -1279,7 +2399,7 @@
 			}
 		},
 		{
-			"id": 60,
+			"id": 109,
 			"name": "TPauseEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1296,19 +2416,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 61,
+							"id": 110,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 62,
+									"id": 111,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1331,7 +2452,7 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										62
+										111
 									]
 								}
 							],
@@ -1348,7 +2469,7 @@
 			}
 		},
 		{
-			"id": 63,
+			"id": 112,
 			"name": "TPlayEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1365,19 +2486,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 64,
+							"id": 113,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 65,
+									"id": 114,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1400,7 +2522,7 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										65
+										114
 									]
 								}
 							],
@@ -1417,7 +2539,7 @@
 			}
 		},
 		{
-			"id": 1,
+			"id": 50,
 			"name": "TPlayerAnalyticsEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1434,89 +2556,89 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 44,
+						"id": 93,
 						"name": "TInitEvent"
 					},
 					{
 						"type": "reference",
-						"id": 29,
+						"id": 78,
 						"name": "THeartbeatEvent"
 					},
 					{
 						"type": "reference",
-						"id": 57,
+						"id": 106,
 						"name": "TLoadingEvent"
 					},
 					{
 						"type": "reference",
-						"id": 54,
+						"id": 103,
 						"name": "TLoadedEvent"
 					},
 					{
 						"type": "reference",
-						"id": 63,
+						"id": 112,
 						"name": "TPlayEvent"
 					},
 					{
 						"type": "reference",
-						"id": 66,
+						"id": 115,
 						"name": "TPlayingEvent"
 					},
 					{
 						"type": "reference",
-						"id": 60,
+						"id": 109,
 						"name": "TPauseEvent"
 					},
 					{
 						"type": "reference",
-						"id": 69,
+						"id": 118,
 						"name": "TResumeEvent"
 					},
 					{
 						"type": "reference",
-						"id": 16,
+						"id": 65,
 						"name": "TBufferingEvent"
 					},
 					{
 						"type": "reference",
-						"id": 13,
+						"id": 62,
 						"name": "TBufferedEvent"
 					},
 					{
 						"type": "reference",
-						"id": 75,
+						"id": 124,
 						"name": "TSeekingEvent"
 					},
 					{
 						"type": "reference",
-						"id": 72,
+						"id": 121,
 						"name": "TSeekedEvent"
 					},
 					{
 						"type": "reference",
-						"id": 9,
+						"id": 58,
 						"name": "TBitrateChangedEvent"
 					},
 					{
 						"type": "reference",
-						"id": 25,
+						"id": 74,
 						"name": "TErrorEvent"
 					},
 					{
 						"type": "reference",
-						"id": 89,
+						"id": 138,
 						"name": "TWarningEvent"
 					},
 					{
 						"type": "reference",
-						"id": 78,
+						"id": 127,
 						"name": "TStoppedEvent"
 					}
 				]
 			}
 		},
 		{
-			"id": 66,
+			"id": 115,
 			"name": "TPlayingEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1533,19 +2655,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 67,
+							"id": 116,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 68,
+									"id": 117,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1568,7 +2691,7 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										68
+										117
 									]
 								}
 							],
@@ -1585,7 +2708,7 @@
 			}
 		},
 		{
-			"id": 69,
+			"id": 118,
 			"name": "TResumeEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1602,19 +2725,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 70,
+							"id": 119,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 71,
+									"id": 120,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1637,7 +2761,7 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										71
+										120
 									]
 								}
 							],
@@ -1654,7 +2778,7 @@
 			}
 		},
 		{
-			"id": 72,
+			"id": 121,
 			"name": "TSeekedEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1671,19 +2795,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 73,
+							"id": 122,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 74,
+									"id": 123,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1706,7 +2831,7 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										74
+										123
 									]
 								}
 							],
@@ -1723,7 +2848,7 @@
 			}
 		},
 		{
-			"id": 75,
+			"id": 124,
 			"name": "TSeekingEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1740,19 +2865,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 76,
+							"id": 125,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 77,
+									"id": 126,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1775,7 +2901,7 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										77
+										126
 									]
 								}
 							],
@@ -1792,7 +2918,7 @@
 			}
 		},
 		{
-			"id": 78,
+			"id": 127,
 			"name": "TStoppedEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1809,19 +2935,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 145,
 						"name": "TBatchEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 79,
+							"id": 128,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 80,
+									"id": 129,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1839,7 +2966,7 @@
 									}
 								},
 								{
-									"id": 82,
+									"id": 131,
 									"name": "payload",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1853,11 +2980,12 @@
 									],
 									"type": {
 										"type": "reference",
+										"id": 142,
 										"name": "TBatchEventPayload"
 									}
 								},
 								{
-									"id": 81,
+									"id": 130,
 									"name": "sessionId",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1871,6 +2999,7 @@
 									],
 									"type": {
 										"type": "reference",
+										"id": 149,
 										"name": "UUID"
 									}
 								}
@@ -1880,9 +3009,9 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										80,
-										82,
-										81
+										129,
+										131,
+										130
 									]
 								}
 							],
@@ -1899,7 +3028,7 @@
 			}
 		},
 		{
-			"id": 89,
+			"id": 138,
 			"name": "TWarningEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1916,19 +3045,20 @@
 				"types": [
 					{
 						"type": "reference",
+						"id": 152,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 90,
+							"id": 139,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 91,
+									"id": 140,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1946,7 +3076,7 @@
 									}
 								},
 								{
-									"id": 92,
+									"id": 141,
 									"name": "payload",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1960,7 +3090,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 83,
+										"id": 132,
 										"name": "TWarningEventPayload"
 									}
 								}
@@ -1970,8 +3100,8 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										91,
-										92
+										140,
+										141
 									]
 								}
 							],
@@ -1988,7 +3118,7 @@
 			}
 		},
 		{
-			"id": 83,
+			"id": 132,
 			"name": "TWarningEventPayload",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -2003,14 +3133,14 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 84,
+					"id": 133,
 					"name": "__type",
 					"kind": 65536,
 					"kindString": "Type literal",
 					"flags": {},
 					"children": [
 						{
-							"id": 85,
+							"id": 134,
 							"name": "category",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2030,7 +3160,7 @@
 							}
 						},
 						{
-							"id": 86,
+							"id": 135,
 							"name": "code",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2048,7 +3178,7 @@
 							}
 						},
 						{
-							"id": 88,
+							"id": 137,
 							"name": "data",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2078,7 +3208,7 @@
 							}
 						},
 						{
-							"id": 87,
+							"id": 136,
 							"name": "message",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2103,10 +3233,10 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								85,
-								86,
-								88,
-								87
+								134,
+								135,
+								137,
+								136
 							]
 						}
 					],
@@ -2119,35 +3249,85 @@
 					]
 				}
 			}
+		},
+		{
+			"id": 148,
+			"name": "UTCTimestamp",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/base.d.ts",
+					"line": 1,
+					"character": 5
+				}
+			],
+			"type": {
+				"type": "intrinsic",
+				"name": "number"
+			}
+		},
+		{
+			"id": 149,
+			"name": "UUID",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/base.d.ts",
+					"line": 2,
+					"character": 5
+				}
+			],
+			"type": {
+				"type": "intrinsic",
+				"name": "string"
+			}
 		}
 	],
 	"groups": [
 		{
+			"title": "Interfaces",
+			"kind": 256,
+			"children": [
+				1
+			]
+		},
+		{
 			"title": "Type aliases",
 			"kind": 4194304,
 			"children": [
-				9,
-				2,
-				13,
-				16,
-				25,
-				19,
-				29,
-				44,
-				34,
-				50,
-				54,
-				57,
-				60,
-				63,
-				1,
-				66,
-				69,
-				72,
-				75,
+				150,
+				152,
+				145,
+				142,
+				151,
+				58,
+				51,
+				62,
+				65,
+				74,
+				68,
 				78,
-				89,
-				83
+				93,
+				83,
+				99,
+				103,
+				106,
+				109,
+				112,
+				50,
+				115,
+				118,
+				121,
+				124,
+				127,
+				138,
+				132,
+				148,
+				149
 			]
 		}
 	],
