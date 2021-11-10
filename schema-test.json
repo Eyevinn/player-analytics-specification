@@ -1,0 +1,1212 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "PlayerAnalyticsClientModule": {
+      "properties": {
+        "bitrateChanged": {
+          "type": "object"
+        },
+        "buffered": {
+          "type": "object"
+        },
+        "buffering": {
+          "type": "object"
+        },
+        "error": {
+          "type": "object"
+        },
+        "heartbeat": {
+          "type": "object"
+        },
+        "init": {
+          "type": "object"
+        },
+        "loaded": {
+          "type": "object"
+        },
+        "loading": {
+          "type": "object"
+        },
+        "pause": {
+          "type": "object"
+        },
+        "play": {
+          "type": "object"
+        },
+        "playing": {
+          "type": "object"
+        },
+        "resume": {
+          "type": "object"
+        },
+        "seeked": {
+          "type": "object"
+        },
+        "seeking": {
+          "type": "object"
+        },
+        "stopped": {
+          "type": "object"
+        },
+        "warning": {
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "Record<string,any>": {
+      "type": "object"
+    },
+    "TBatchEventPayload": {
+      "properties": {
+        "event": {
+          "items": {
+            "anyOf": [
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.bitrate_changed"
+                        ],
+                        "type": "string"
+                      },
+                      "payload": {
+                        "properties": {
+                          "audioBitrate": {
+                            "type": "number"
+                          },
+                          "bitrate": {
+                            "type": "number"
+                          },
+                          "height": {
+                            "type": "number"
+                          },
+                          "videoBitrate": {
+                            "type": "number"
+                          },
+                          "width": {
+                            "type": "number"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.buffered"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.buffering"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.error"
+                        ],
+                        "type": "string"
+                      },
+                      "payload": {
+                        "properties": {
+                          "category": {
+                            "type": "string"
+                          },
+                          "code": {
+                            "type": "string"
+                          },
+                          "data": {
+                            "$ref": "#/definitions/Record<string,any>"
+                          },
+                          "message": {
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.init"
+                        ],
+                        "type": "string"
+                      },
+                      "heartbeatInterval": {
+                        "type": "number"
+                      },
+                      "payload": {
+                        "allOf": [
+                          {
+                            "$ref": "#/definitions/Record<string,any>"
+                          },
+                          {
+                            "properties": {
+                              "contentId": {
+                                "type": "string"
+                              },
+                              "contentUrl": {
+                                "type": "string"
+                              },
+                              "deviceId": {
+                                "type": "string"
+                              },
+                              "deviceModel": {
+                                "type": "string"
+                              },
+                              "deviceType": {
+                                "type": "string"
+                              },
+                              "drmType": {
+                                "type": "string"
+                              },
+                              "live": {
+                                "type": "boolean"
+                              },
+                              "userId": {
+                                "type": "string"
+                              }
+                            },
+                            "type": "object"
+                          }
+                        ]
+                      },
+                      "sessionId": {
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.loading"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.loaded"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.play"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.playing"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.pause"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.resume"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.seeking"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.seeked"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.warning"
+                        ],
+                        "type": "string"
+                      },
+                      "payload": {
+                        "properties": {
+                          "category": {
+                            "type": "string"
+                          },
+                          "code": {
+                            "type": "string"
+                          },
+                          "data": {
+                            "$ref": "#/definitions/Record<string,any>"
+                          },
+                          "message": {
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "$ref": "#/definitions/TStoppedEvent"
+              },
+              {
+                "allOf": [
+                  {
+                    "properties": {
+                      "duration": {
+                        "type": "number"
+                      },
+                      "playhead": {
+                        "type": "number"
+                      },
+                      "timestamp": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "$ref": "#/definitions/{payload:TBatchEventPayload;}"
+                  },
+                  {
+                    "properties": {
+                      "event": {
+                        "enum": [
+                          "pas.batch.heartbeat"
+                        ],
+                        "type": "string"
+                      },
+                      "payload": {
+                        "$ref": "#/definitions/TBatchEventPayload"
+                      },
+                      "sessionId": {
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "THeartbeatEvent": {
+      "allOf": [
+        {
+          "properties": {
+            "duration": {
+              "type": "number"
+            },
+            "playhead": {
+              "type": "number"
+            },
+            "timestamp": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        {
+          "$ref": "#/definitions/{payload:TBatchEventPayload;}"
+        },
+        {
+          "properties": {
+            "event": {
+              "enum": [
+                "pas.batch.heartbeat"
+              ],
+              "type": "string"
+            },
+            "payload": {
+              "$ref": "#/definitions/TBatchEventPayload"
+            },
+            "sessionId": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "TPlayerAnalyticsEvent": {
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.bitrate_changed"
+                  ],
+                  "type": "string"
+                },
+                "payload": {
+                  "properties": {
+                    "audioBitrate": {
+                      "type": "number"
+                    },
+                    "bitrate": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "videoBitrate": {
+                      "type": "number"
+                    },
+                    "width": {
+                      "type": "number"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.buffered"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.buffering"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.error"
+                  ],
+                  "type": "string"
+                },
+                "payload": {
+                  "properties": {
+                    "category": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "$ref": "#/definitions/Record<string,any>"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.init"
+                  ],
+                  "type": "string"
+                },
+                "heartbeatInterval": {
+                  "type": "number"
+                },
+                "payload": {
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/Record<string,any>"
+                    },
+                    {
+                      "properties": {
+                        "contentId": {
+                          "type": "string"
+                        },
+                        "contentUrl": {
+                          "type": "string"
+                        },
+                        "deviceId": {
+                          "type": "string"
+                        },
+                        "deviceModel": {
+                          "type": "string"
+                        },
+                        "deviceType": {
+                          "type": "string"
+                        },
+                        "drmType": {
+                          "type": "string"
+                        },
+                        "live": {
+                          "type": "boolean"
+                        },
+                        "userId": {
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  ]
+                },
+                "sessionId": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.loading"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.loaded"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.play"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.playing"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.pause"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.resume"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.seeking"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.seeked"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "properties": {
+                "duration": {
+                  "type": "number"
+                },
+                "playhead": {
+                  "type": "number"
+                },
+                "timestamp": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "properties": {
+                "event": {
+                  "enum": [
+                    "pas.warning"
+                  ],
+                  "type": "string"
+                },
+                "payload": {
+                  "properties": {
+                    "category": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "$ref": "#/definitions/Record<string,any>"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "$ref": "#/definitions/TStoppedEvent"
+        },
+        {
+          "$ref": "#/definitions/THeartbeatEvent"
+        }
+      ]
+    },
+    "TStoppedEvent": {
+      "allOf": [
+        {
+          "properties": {
+            "duration": {
+              "type": "number"
+            },
+            "playhead": {
+              "type": "number"
+            },
+            "timestamp": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        {
+          "$ref": "#/definitions/{payload:TBatchEventPayload;}"
+        },
+        {
+          "properties": {
+            "event": {
+              "enum": [
+                "pas.batch.stopped"
+              ],
+              "type": "string"
+            },
+            "payload": {
+              "$ref": "#/definitions/TBatchEventPayload"
+            },
+            "sessionId": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "{payload:TBatchEventPayload;}": {
+      "properties": {
+        "payload": {
+          "$ref": "#/definitions/TBatchEventPayload"
+        }
+      },
+      "type": "object"
+    }
+  }
+}
