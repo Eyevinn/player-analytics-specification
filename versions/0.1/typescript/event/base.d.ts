@@ -19,6 +19,6 @@ export type TBatchedEventType =
 
 export type TBaseEvent = {
   timestamp: UTCTimestamp;
-  playhead: number;
-  duration: number;
+  playhead: Seconds;
+  duration: Seconds;
 }
