@@ -1,0 +1,2161 @@
+{
+	"id": 0,
+	"name": "player-analytics-specification",
+	"kind": 1,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 9,
+			"name": "TBitrateChangedEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/bitrate-changed.d.ts",
+					"line": 11,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 10,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 11,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/bitrate-changed.d.ts",
+											"line": 12,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.bitrate_changed"
+									}
+								},
+								{
+									"id": 12,
+									"name": "payload",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/bitrate-changed.d.ts",
+											"line": 13,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "TBitrateChangedEventPayload"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										11,
+										12
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/bitrate-changed.d.ts",
+									"line": 11,
+									"character": 48
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 2,
+			"name": "TBitrateChangedEventPayload",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/bitrate-changed.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 3,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 8,
+							"name": "audioBitrate",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/bitrate-changed.d.ts",
+									"line": 8,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 4,
+							"name": "bitrate",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "event/bitrate-changed.d.ts",
+									"line": 4,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 6,
+							"name": "height",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/bitrate-changed.d.ts",
+									"line": 6,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 7,
+							"name": "videoBitrate",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/bitrate-changed.d.ts",
+									"line": 7,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 5,
+							"name": "width",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/bitrate-changed.d.ts",
+									"line": 5,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								8,
+								4,
+								6,
+								7,
+								5
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "event/bitrate-changed.d.ts",
+							"line": 3,
+							"character": 42
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 13,
+			"name": "TBufferedEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/buffered.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 14,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 15,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/buffered.d.ts",
+											"line": 4,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.buffered"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										15
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/buffered.d.ts",
+									"line": 3,
+									"character": 42
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 16,
+			"name": "TBufferingEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/buffering.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 17,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 18,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/buffering.d.ts",
+											"line": 4,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.buffering"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										18
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/buffering.d.ts",
+									"line": 3,
+									"character": 43
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 25,
+			"name": "TErrorEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/error.d.ts",
+					"line": 12,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 26,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 27,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/error.d.ts",
+											"line": 13,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.error"
+									}
+								},
+								{
+									"id": 28,
+									"name": "payload",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/error.d.ts",
+											"line": 14,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 19,
+										"name": "TErrorEventPayload"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										27,
+										28
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/error.d.ts",
+									"line": 12,
+									"character": 39
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 19,
+			"name": "TErrorEventPayload",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/error.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 20,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 21,
+							"name": "category",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/error.d.ts",
+									"line": 4,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 22,
+							"name": "code",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "event/error.d.ts",
+									"line": 5,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 24,
+							"name": "data",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/error.d.ts",
+									"line": 9,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "any"
+									}
+								],
+								"name": "Record"
+							}
+						},
+						{
+							"id": 23,
+							"name": "message",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/error.d.ts",
+									"line": 6,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								21,
+								22,
+								24,
+								23
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "event/error.d.ts",
+							"line": 3,
+							"character": 33
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 29,
+			"name": "THeartbeatEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/heartbeat.d.ts",
+					"line": 4,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBatchEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 30,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 31,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/heartbeat.d.ts",
+											"line": 5,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.batch.heartbeat"
+									}
+								},
+								{
+									"id": 33,
+									"name": "payload",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/heartbeat.d.ts",
+											"line": 7,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "TBatchEventPayload"
+									}
+								},
+								{
+									"id": 32,
+									"name": "sessionId",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "event/heartbeat.d.ts",
+											"line": 6,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "UUID"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										31,
+										33,
+										32
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/heartbeat.d.ts",
+									"line": 4,
+									"character": 44
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 44,
+			"name": "TInitEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/init.d.ts",
+					"line": 14,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 45,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 46,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/init.d.ts",
+											"line": 15,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.init"
+									}
+								},
+								{
+									"id": 48,
+									"name": "heartbeatInterval",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "event/init.d.ts",
+											"line": 17,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "Seconds"
+									}
+								},
+								{
+									"id": 49,
+									"name": "payload",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/init.d.ts",
+											"line": 18,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 34,
+										"name": "TInitEventPayload"
+									}
+								},
+								{
+									"id": 47,
+									"name": "sessionId",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "event/init.d.ts",
+											"line": 16,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "UUID"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										46,
+										48,
+										49,
+										47
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/init.d.ts",
+									"line": 14,
+									"character": 38
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 34,
+			"name": "TInitEventPayload",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/init.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "any"
+							}
+						],
+						"name": "Record"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 35,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 37,
+									"name": "contentId",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/init.d.ts",
+											"line": 5,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 38,
+									"name": "contentUrl",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/init.d.ts",
+											"line": 6,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 41,
+									"name": "deviceId",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "event/init.d.ts",
+											"line": 9,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 42,
+									"name": "deviceModel",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "event/init.d.ts",
+											"line": 10,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 43,
+									"name": "deviceType",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "event/init.d.ts",
+											"line": 11,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 39,
+									"name": "drmType",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "event/init.d.ts",
+											"line": 7,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 36,
+									"name": "live",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/init.d.ts",
+											"line": 4,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								},
+								{
+									"id": 40,
+									"name": "userId",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "event/init.d.ts",
+											"line": 8,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										37,
+										38,
+										41,
+										42,
+										43,
+										39,
+										36,
+										40
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/init.d.ts",
+									"line": 3,
+									"character": 54
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 50,
+			"name": "TInitResponse",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/init.d.ts",
+					"line": 21,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 51,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 53,
+							"name": "heartbeatInterval",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "event/init.d.ts",
+									"line": 23,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Seconds"
+							}
+						},
+						{
+							"id": 52,
+							"name": "sessionId",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "event/init.d.ts",
+									"line": 22,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "UUID"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								53,
+								52
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "event/init.d.ts",
+							"line": 21,
+							"character": 28
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 54,
+			"name": "TLoadedEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/loaded.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 55,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 56,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/loaded.d.ts",
+											"line": 4,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.loaded"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										56
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/loaded.d.ts",
+									"line": 3,
+									"character": 40
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 57,
+			"name": "TLoadingEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/loading.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 58,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 59,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/loading.d.ts",
+											"line": 4,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.loading"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										59
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/loading.d.ts",
+									"line": 3,
+									"character": 41
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 60,
+			"name": "TPauseEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/pause.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 61,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 62,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/pause.d.ts",
+											"line": 4,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.pause"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										62
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/pause.d.ts",
+									"line": 3,
+									"character": 39
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 63,
+			"name": "TPlayEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/play.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 64,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 65,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/play.d.ts",
+											"line": 4,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.play"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										65
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/play.d.ts",
+									"line": 3,
+									"character": 38
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 1,
+			"name": "TPlayerAnalyticsEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 39,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "reference",
+						"id": 44,
+						"name": "TInitEvent"
+					},
+					{
+						"type": "reference",
+						"id": 29,
+						"name": "THeartbeatEvent"
+					},
+					{
+						"type": "reference",
+						"id": 57,
+						"name": "TLoadingEvent"
+					},
+					{
+						"type": "reference",
+						"id": 54,
+						"name": "TLoadedEvent"
+					},
+					{
+						"type": "reference",
+						"id": 63,
+						"name": "TPlayEvent"
+					},
+					{
+						"type": "reference",
+						"id": 66,
+						"name": "TPlayingEvent"
+					},
+					{
+						"type": "reference",
+						"id": 60,
+						"name": "TPauseEvent"
+					},
+					{
+						"type": "reference",
+						"id": 69,
+						"name": "TResumeEvent"
+					},
+					{
+						"type": "reference",
+						"id": 16,
+						"name": "TBufferingEvent"
+					},
+					{
+						"type": "reference",
+						"id": 13,
+						"name": "TBufferedEvent"
+					},
+					{
+						"type": "reference",
+						"id": 75,
+						"name": "TSeekingEvent"
+					},
+					{
+						"type": "reference",
+						"id": 72,
+						"name": "TSeekedEvent"
+					},
+					{
+						"type": "reference",
+						"id": 9,
+						"name": "TBitrateChangedEvent"
+					},
+					{
+						"type": "reference",
+						"id": 25,
+						"name": "TErrorEvent"
+					},
+					{
+						"type": "reference",
+						"id": 89,
+						"name": "TWarningEvent"
+					},
+					{
+						"type": "reference",
+						"id": 78,
+						"name": "TStoppedEvent"
+					}
+				]
+			}
+		},
+		{
+			"id": 66,
+			"name": "TPlayingEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/playing.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 67,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 68,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/playing.d.ts",
+											"line": 4,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.playing"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										68
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/playing.d.ts",
+									"line": 3,
+									"character": 41
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 69,
+			"name": "TResumeEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/resume.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 70,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 71,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/resume.d.ts",
+											"line": 4,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.resume"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										71
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/resume.d.ts",
+									"line": 3,
+									"character": 40
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 72,
+			"name": "TSeekedEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/seeked.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 73,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 74,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/seeked.d.ts",
+											"line": 4,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.seeked"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										74
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/seeked.d.ts",
+									"line": 3,
+									"character": 40
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 75,
+			"name": "TSeekingEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/seeking.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 76,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 77,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/seeking.d.ts",
+											"line": 4,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.seeking"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										77
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/seeking.d.ts",
+									"line": 3,
+									"character": 41
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 78,
+			"name": "TStoppedEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/stopped.d.ts",
+					"line": 4,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBatchEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 79,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 80,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/stopped.d.ts",
+											"line": 5,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.batch.stopped"
+									}
+								},
+								{
+									"id": 82,
+									"name": "payload",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/stopped.d.ts",
+											"line": 7,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "TBatchEventPayload"
+									}
+								},
+								{
+									"id": 81,
+									"name": "sessionId",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/stopped.d.ts",
+											"line": 6,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "UUID"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										80,
+										82,
+										81
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/stopped.d.ts",
+									"line": 4,
+									"character": 42
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 89,
+			"name": "TWarningEvent",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/warning.d.ts",
+					"line": 12,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "TBaseEvent"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 90,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 91,
+									"name": "event",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/warning.d.ts",
+											"line": 13,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "pas.warning"
+									}
+								},
+								{
+									"id": 92,
+									"name": "payload",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/warning.d.ts",
+											"line": 14,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 83,
+										"name": "TWarningEventPayload"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										91,
+										92
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "event/warning.d.ts",
+									"line": 12,
+									"character": 41
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 83,
+			"name": "TWarningEventPayload",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/warning.d.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 84,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 85,
+							"name": "category",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/warning.d.ts",
+									"line": 4,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 86,
+							"name": "code",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "event/warning.d.ts",
+									"line": 5,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 88,
+							"name": "data",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/warning.d.ts",
+									"line": 9,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "any"
+									}
+								],
+								"name": "Record"
+							}
+						},
+						{
+							"id": 87,
+							"name": "message",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/warning.d.ts",
+									"line": 6,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								85,
+								86,
+								88,
+								87
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "event/warning.d.ts",
+							"line": 3,
+							"character": 35
+						}
+					]
+				}
+			}
+		}
+	],
+	"groups": [
+		{
+			"title": "Type aliases",
+			"kind": 4194304,
+			"children": [
+				9,
+				2,
+				13,
+				16,
+				25,
+				19,
+				29,
+				44,
+				34,
+				50,
+				54,
+				57,
+				60,
+				63,
+				1,
+				66,
+				69,
+				72,
+				75,
+				78,
+				89,
+				83
+			]
+		}
+	],
+	"sources": [
+		{
+			"fileName": "index.ts",
+			"line": 1,
+			"character": 0
+		}
+	]
+}
