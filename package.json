@@ -9,7 +9,7 @@
   "contributors": [
     "Martin <901824+martinstark@users.noreply.github.com>"
   ],
-  "license": "MIT",
+  "license": "Apache License 2.0",
   "scripts": {
     "typedoc": "typedoc",
     "json": "typescript-json-schema versions/0.1/typescript/index.ts \"*\""
