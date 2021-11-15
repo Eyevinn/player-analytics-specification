@@ -10,6 +10,6 @@ export type TWarningEventPayload = {
 }
 
 export type TWarningEvent = TBaseEvent & {
-  event: "pas.warning";
+  event: "warning";
   payload: TWarningEventPayload;
 }
