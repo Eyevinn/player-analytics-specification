@@ -9,6 +9,6 @@ export type TBitrateChangedEventPayload = {
 }
 
 export type TBitrateChangedEvent = TBaseEvent & {
-  event: "pas.bitrate_changed";
+  event: "bitrate_changed";
   payload: TBitrateChangedEventPayload;
 }

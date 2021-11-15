@@ -12,7 +12,7 @@ export type TInitEventPayload = Record<string, any> & {
 }
 
 export type TInitEvent = TBaseEvent & {
-  event: "pas.init";
+  event: "init";
   sessionId?: UUID;
   heartbeatInterval?: Seconds;
   payload: TInitEventPayload;

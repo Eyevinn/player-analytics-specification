@@ -10,6 +10,6 @@ export type TErrorEventPayload = {
 }
 
 export type TErrorEvent = TBaseEvent & {
-  event: "pas.error";
+  event: "error";
   payload: TErrorEventPayload;
 }

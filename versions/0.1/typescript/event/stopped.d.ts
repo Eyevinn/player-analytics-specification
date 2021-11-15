@@ -2,7 +2,7 @@ import { TBatchEvent, TBatchEventPayload } from "./batch";
 import { UUID } from "./base";
 
 export type TStoppedEvent = TBatchEvent & {
-  event: "pas.batch.stopped";
+  event: "stopped";
   sessionId: UUID;
   payload: TBatchEventPayload;
 }
