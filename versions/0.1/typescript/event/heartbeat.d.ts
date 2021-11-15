@@ -3,6 +3,6 @@ import { UUID } from "./base";
 
 export type THeartbeatEvent = TBatchEvent & {
   event: "heartbeat";
-  sessionId?: UUID;
+  sessionId: UUID;
   payload: TBatchEventPayload;
 }
