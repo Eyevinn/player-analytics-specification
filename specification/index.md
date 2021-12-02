@@ -10,7 +10,7 @@
 |:-------------------------|:--------|
 | VOD                      | ✅      |
 | Live Events              | ⚠️      |
-| Live channels            | ⚠️      cloudflared tunnel create|
+| Live channels            | ⚠️      |
 | Server-side Ad insertion | 🚫      |
 | Client-side Ad insertion | 🚫      |
 
