@@ -2,12 +2,13 @@ type UTCTimestamp = number;
 type UUID = string;
 type Seconds = number;
 
-export type TBatchedEventType =
+export type TEventType =
+  | "init"
+  | "heartbeat"
   | "loading"
   | "loaded"
-  | "play"
   | "playing"
-  | "pause"
+  | "paused"
   | "resume"
   | "buffering"
   | "buffered"
@@ -21,4 +22,5 @@ export type TBaseEvent = {
   timestamp: UTCTimestamp;
   playhead: Seconds;
   duration: Seconds;
+  sessionId: UUID;
 }

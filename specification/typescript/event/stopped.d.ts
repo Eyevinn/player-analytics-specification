@@ -1,8 +1,10 @@
-import { TBatchEvent, TBatchEventPayload } from "./batch";
-import { UUID } from "./base";
+import { TBaseEvent } from "./base";
 
-export type TStoppedEvent = TBatchEvent & {
+type TStoppedEventPayload = {
+  reason?: string;
+}
+
+export type TStoppedEvent = TBaseEvent & {
   event: "stopped";
-  sessionId: UUID;
-  payload: TBatchEventPayload;
+  payload: TStoppedEventPayload;
 }

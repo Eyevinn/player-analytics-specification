@@ -1,8 +1,5 @@
-import { TBatchEvent, TBatchEventPayload } from "./batch";
-import { UUID } from "./base";
+import { TBaseEvent } from "./base";
 
-export type THeartbeatEvent = TBatchEvent & {
+export type THeartbeatEvent = TBaseEvent & {
   event: "heartbeat";
-  sessionId: UUID;
-  payload: TBatchEventPayload;
 }

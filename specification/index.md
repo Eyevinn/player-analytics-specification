@@ -130,13 +130,13 @@ Sent when playback start/resumes, when the playhead starts to move.
 }
 ```
 
-#### pause
+#### paused
 
 Sent when the player is paused due to a pause request, not when eg. buffering.
 
 ```jsonc
 {
-  event: "pause",
+  event: "paused",
   timestamp: 0,
   playhead: 0,
   duration: 0
