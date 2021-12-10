@@ -14,6 +14,7 @@ export type TEventType =
   | "buffered"
   | "seeking"
   | "seeked"
+  | "stopped"
   | "bitrate_changed"
   | "error"
   | "warning";
