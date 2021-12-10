@@ -96,6 +96,7 @@ MUST be sent ONCE per session.
 ```jsonc
 {
   event: "loading",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0,
@@ -111,6 +112,7 @@ MUST be sent ONCE per session.
 ```jsonc
 {
   event: "loaded",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
@@ -124,6 +126,7 @@ Sent when playback start/resumes, when the playhead starts to move.
 ```jsonc
 {
   event: "playing",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
@@ -137,6 +140,7 @@ Sent when the player is paused due to a pause request, not when eg. buffering.
 ```jsonc
 {
   event: "paused",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
@@ -150,6 +154,7 @@ Sent when the player starts buffering. Any buffering that happens when seeking o
 ```jsonc
 {
   event: "buffering",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
@@ -163,6 +168,7 @@ Sent when the player resumes playback after buffering. If the buffering is inter
 ```jsonc
 {
   event: "buffered",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
@@ -176,6 +182,7 @@ This is sent when the player starts seeking to a new playhead time. `playhead` M
 ```jsonc
 {
   event: "seeking",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
@@ -189,6 +196,7 @@ Sent when the player starts seeking to a new playhead time. `playhead` MUST be n
 ```jsonc
 {
   event: "seeked",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
@@ -202,6 +210,7 @@ Sent when the player switches between different ABR levels.
 ```jsonc
 {
   event: "bitrate_changed",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0,
@@ -239,6 +248,7 @@ Sent when a fatal error occurs the `stopped` event SHOULD be sent with `reason: 
 ```jsonc
 {
   event: "error",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0,
@@ -259,6 +269,7 @@ from without interruption.
 ```jsonc
 {
   event: "warning",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0,
