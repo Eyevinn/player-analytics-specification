@@ -1,5 +1,5 @@
 {
-  "entryPoints": ["versions/0.1/typescript/index.ts"],
+  "entryPoints": ["specification/typescript/index.ts"],
   "out": "docs",
   "json": "json/specification"
 }

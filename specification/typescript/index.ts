@@ -1,12 +1,10 @@
-import { TInitEvent, TInitResponse } from "./event";
+import { TInitEvent } from "./event";
 import { THeartbeatEvent } from "./event";
 import { TStoppedEvent } from "./event";
 import { TLoadingEvent } from "./event";
 import { TLoadedEvent } from "./event";
-import { TPlayEvent } from "./event";
 import { TPlayingEvent } from "./event";
-import { TPauseEvent } from "./event";
-import { TResumeEvent } from "./event";
+import { TPausedEvent } from "./event";
 import { TBufferingEvent } from "./event";
 import { TBufferedEvent } from "./event";
 import { TSeekingEvent } from "./event";
@@ -18,14 +16,12 @@ import { TWarningEvent } from "./event";
 export * from "./event";
 
 export interface PlayerAnalyticsClientModule {
-  init: (data: TInitEvent) => Promise<TInitResponse>;
+  init: (data: TInitEvent) => void;
   heartbeat: (data: THeartbeatEvent) => void;
   loading: (data: TLoadingEvent) => void;
   loaded: (data: TLoadedEvent) => void;
-  play: (data: TPlayEvent) => void;
   playing: (data: TPlayingEvent) => void;
-  pause: (data: TPauseEvent) => void;
-  resume: (data: TResumeEvent) => void;
+  pause: (data: TPausedEvent) => void;
   buffering: (data: TBufferingEvent) => void;
   buffered: (data: TBufferedEvent) => void;
   seeking: (data: TSeekingEvent) => void;
@@ -40,10 +36,8 @@ export type TPlayerAnalyticsEvent = TInitEvent |
   THeartbeatEvent |
   TLoadingEvent |
   TLoadedEvent |
-  TPlayEvent |
   TPlayingEvent |
-  TPauseEvent |
-  TResumeEvent |
+  TPausedEvent |
   TBufferingEvent |
   TBufferedEvent |
   TSeekingEvent |

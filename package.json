@@ -1,9 +1,9 @@
 {
   "name": "player-analytics-specification",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Eyevinn Player Analytics Specification",
   "main": "index.js",
-  "types": "./versions/0.1/typescript/index.ts",
+  "types": "./specification/typescript/index.ts",
   "repository": "git@github.com:Eyevinn/player-analytics-specification.git",
   "author": "Eyevinn Technology <work@eyevinn.se>",
   "contributors": [
@@ -12,7 +12,7 @@
   "license": "Apache License 2.0",
   "scripts": {
     "typedoc": "typedoc",
-    "json": "typescript-json-schema versions/0.1/typescript/index.ts \"*\""
+    "json": "typescript-json-schema specification/typescript/index.ts \"*\""
   },
   "dependencies": {
     "typedoc": "^0.22.8",

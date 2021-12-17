@@ -1,4 +1,4 @@
-import { Seconds, TBaseEvent, UUID } from "./base";
+import { TBaseEvent } from "./base";
 
 export type TInitEventPayload = Record<string, any> & {
   live: boolean,
@@ -13,12 +13,5 @@ export type TInitEventPayload = Record<string, any> & {
 
 export type TInitEvent = TBaseEvent & {
   event: "init";
-  sessionId?: UUID;
-  heartbeatInterval?: Seconds;
   payload: TInitEventPayload;
-}
-
-export type TInitResponse = {
-  sessionId: UUID;
-  heartbeatInterval: Seconds;
 }

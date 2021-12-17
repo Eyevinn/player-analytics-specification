@@ -1,4 +1,4 @@
-# Version 0.1
+# Version 0.2
 
 ## Supported playback scenarios 
 
@@ -16,17 +16,14 @@
 
 ## Terminology
 
-`session` - A session means the viewing session of some particular content so `sessionId` refers to the unique viewing session of some content.
+`session` - A session means the viewing session of some particular content so `sessionId` refers to the unique viewing session of content.
 
 ## Event flow
 
 Any analytics specification needs a solid and reliable event flow, it is crucial that the following events are implemented correctly for the backend to reliably be able to churn out good session data.
 
-All events except `init`, `heartbeat` and `stopped` SHOULD be batched together and sent with the `hearbeat` and `stopped` event. Batched events MUST be re-sent in case of network failure.
-
 ### JSON Schema
 
-Single event
 ```jsonc
 {
   event: "event_enum",
@@ -42,26 +39,6 @@ Single event
 }
 ```
 
-Batched events in heartbeat/stopped
-```jsonc
-{
-  event: "heartbeat", // or "stopped"
-  sessionId: "UID",
-  timestamp: 1634911668339, // UTC time. The client SHOULD send valid UTC time.
-
-  playhead: 0, // The current playhead position in milliseconds, if the content is Live should be UTC time. -1 if unknown
-  duration: 0, // The duration of the content in milliseconds. VOD = length of stream, Live = live edge in UTC. -1 if unknown 
-  payload: {
-    events: [{
-      // include all events here
-    }],
-    ... // the other stopped/hearbeat payload fields
-  } 
-}
-```
-
-See the full [schema](schema/0.1.schema.json)
-
 ### Flowchart
 
 ![](./flowchart/epas_flowchart.png)
@@ -70,14 +47,14 @@ See the full [schema](schema/0.1.schema.json)
 
 #### init
 
-Sent just before the player starts loading the contentUrl.
-MUST be sent ONCE per session. CANNOT be batched
+Sent just before the player starts loading a new contentUrl, a restart of the content SHOULD create a new session.
+MUST be sent ONCE per session.
+MUST be a unique sessionId.
 
 ```jsonc
 {
   event: "init",
-  sessionId?: "", // if not provided the server MUST generate it
-  heartbeatInterval?: number, // if not provided the server MUST generate it
+  sessionId: "", // if not provided the server MUST generate it
   timestamp: -1,
   playhead: -1, // if the player has an expected startTime, eg. if user continues watches a movie, use that value here.
   duration: -1,
@@ -95,19 +72,9 @@ MUST be sent ONCE per session. CANNOT be batched
 }
 ```
 
-The `init` event is the only event that actually receives a JSON response from the server
-```jsonc
-{
-  sessionId: ''
-  heartbeatInterval: 30, 
-}
-```
-
-After the init response the client MUST send the heartbeat event at the provided interval, until the session has ended.
-
 #### heartbeat
 
-Sent at a fixed interval using the provided value from the `init` event response.
+MUST be Sent at a fixed interval using the provided value from the `init` event response. The interval SHOULD be agreed upon between client & server.
 
 ```jsonc
 {
@@ -117,9 +84,6 @@ Sent at a fixed interval using the provided value from the `init` event response
   playhead: 0,
   duration: 0,
   payload?: {
-    events?: [{
-      ... // batched events if any
-    }]
   }
 }
 ```
@@ -132,9 +96,10 @@ MUST be sent ONCE per session.
 ```jsonc
 {
   event: "loading",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
-  duration: 0
+  duration: 0,
 }
 ```
 
@@ -147,62 +112,35 @@ MUST be sent ONCE per session.
 ```jsonc
 {
   event: "loaded",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
 }
 ```
-
-#### play
-
-Sent as soon as player request that playback starts, eg. when the user presses play or when autoplay kicks in.
-MUST be sent ONCE per session.
-
-```jsonc
-{
-  event: "play",
-  timestamp: 0,
-  playhead: 0,
-  duration: 0
-}
-```
-
 
 #### playing
 
-Sent when playback starts, when the playhead starts to move.
-MUST be sent ONCE per session.
+Sent when playback start/resumes, when the playhead starts to move.
 
 ```jsonc
 {
   event: "playing",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
 }
 ```
 
+#### paused
 
-#### pause
-
-Sent when the player is paused due to a pause request ( not because the playhead stopped moving )
-
-```jsonc
-{
-  event: "pause",
-  timestamp: 0,
-  playhead: 0,
-  duration: 0
-}
-```
-
-#### resume
-
-Sent when the player resume playback after a pause.
+Sent when the player is paused due to a pause request, not when eg. buffering.
 
 ```jsonc
 {
-  event: "resume",
+  event: "paused",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
@@ -216,6 +154,7 @@ Sent when the player starts buffering. Any buffering that happens when seeking o
 ```jsonc
 {
   event: "buffering",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
@@ -229,6 +168,7 @@ Sent when the player resumes playback after buffering. If the buffering is inter
 ```jsonc
 {
   event: "buffered",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
@@ -237,11 +177,12 @@ Sent when the player resumes playback after buffering. If the buffering is inter
 
 #### seeking
 
-This is sent when the player starts seeking to a new playhead time. `playhead` MUST be the current playhead time NOT the target playhead time. Should not be sent during `loading`.
+This is sent when the player starts seeking to a new playhead time. `playhead` MUST be the current playhead time NOT the target playhead time. MUST not be sent during `loading`.
 
 ```jsonc
 {
   event: "seeking",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
@@ -255,6 +196,7 @@ Sent when the player starts seeking to a new playhead time. `playhead` MUST be n
 ```jsonc
 {
   event: "seeked",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0
@@ -268,6 +210,7 @@ Sent when the player switches between different ABR levels.
 ```jsonc
 {
   event: "bitrate_changed",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0,
@@ -283,7 +226,7 @@ Sent when the player switches between different ABR levels.
 
 #### stopped
 
-Sent when playback stops for whatever reason.
+Sent when playback stops for whatever reason. 
 
 ```jsonc
 {
@@ -294,20 +237,18 @@ Sent when playback stops for whatever reason.
   duration: 0,
   payload: {
     reason?: "", // eg. "ended", "aborted", "error"
-    events?: [{
-      ... // batched events if any
-    }]
   }
 }
 ```
 
 #### error
 
-Sent when a fatal error occurs, if the player does not recover from this error the `stopped` event SHOULD be sent with `reason: "error"`.
+Sent when a fatal error occurs the `stopped` event SHOULD be sent with `reason: "error"`.
 
 ```jsonc
 {
   event: "error",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0,
@@ -328,6 +269,7 @@ from without interruption.
 ```jsonc
 {
   event: "warning",
+  sessionId: "",
   timestamp: 0,
   playhead: 0,
   duration: 0,
