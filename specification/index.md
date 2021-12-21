@@ -56,7 +56,7 @@ MUST be a unique sessionId.
   event: "init",
   sessionId: "", // if not provided the server MUST generate it
   timestamp: -1,
-  playhead: -1, // if the player has an expected startTime, eg. if user continues watches a movie, use that value here.
+  playhead: -1, // if the player has an expected startTime, eg. if user continues watching a movie, use that value here.
   duration: -1,
   payload: {
     live: false,
