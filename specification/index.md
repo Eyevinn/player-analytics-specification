@@ -167,7 +167,7 @@ Should not be sent when playback stops for other reasons, e.g. buffering or seek
 
 Sent when the player starts buffering. Buffering that happens when seeking or loading should be ignored.
 
-Note, since it is possible to `pause` during buffering, the corresponding `playing` should not trigger until after `buffered`, since that is when the playhead can start moving again.
+Note, since it is possible to pause and unpause during buffering, the corresponding `playing` should not trigger until after `buffered`, since that is when the playhead can start moving again.
 
 ```jsonc
 {
@@ -201,7 +201,7 @@ Sent when the player starts seeking to a new playhead time.
 
 The `playhead` MUST be the current playhead time NOT the target playhead time.
 
-Note, since it is possible to `pause` during seeking, the corresponding `playing` should not trigger until after `seeked`, since that is when the playhead can start moving again.
+Note, since it is possible to pause and unpause during seeking, the corresponding `playing` should not trigger until after `seeked`, since that is when the playhead can start moving again.
 
 MUST not be sent during `loading`.
 
