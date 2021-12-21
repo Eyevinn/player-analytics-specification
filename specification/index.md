@@ -16,11 +16,15 @@
 
 ## Terminology
 
-`session` - A session means the viewing session of some particular content so `sessionId` refers to the unique viewing session of content.
+`session` - A session means the viewing session of a piece of content.
+
+`sessionId` - Refers to the unique identifier for a viewing session of a piece of  content.
+
+`event` - Refers to a set of data that corresponds to the viewing experience.
 
 ## Event flow
 
-Any analytics specification needs a solid and reliable event flow, it is crucial that the following events are implemented correctly for the backend to reliably be able to churn out good session data.
+An analytics specification needs a reliable event flow, it is crucial that the following events are implemented correctly for the backend to be able to churn out session data.
 
 ### JSON Schema
 
@@ -47,14 +51,18 @@ Any analytics specification needs a solid and reliable event flow, it is crucial
 
 #### init
 
-Sent just before the player starts loading a new contentUrl, a restart of the content SHOULD create a new session.
+Sent when the client knows it should start a viewing session of content.
+
+A restart of content SHOULD create a new session.
+
 MUST be sent ONCE per session.
+
 MUST be a unique sessionId.
 
 ```jsonc
 {
   event: "init",
-  sessionId: "", // if not provided the server MUST generate it
+  sessionId: "",
   timestamp: -1,
   playhead: -1, // if the player has an expected startTime, eg. if user continues watching a movie, use that value here.
   duration: -1,
@@ -74,7 +82,11 @@ MUST be a unique sessionId.
 
 #### heartbeat
 
-MUST be Sent at a fixed interval using the provided value from the `init` event response. The interval SHOULD be agreed upon between client & server.
+Sent on an interval, if a certain number of heartbeat events are missing the server can close a session without receiving a stopped event. 
+
+MUST be sent at a fixed interval.
+
+The interval SHOULD be agreed upon between client and server.
 
 ```jsonc
 {
@@ -91,6 +103,7 @@ MUST be Sent at a fixed interval using the provided value from the `init` event 
 #### loading
 
 Sent when the contentUrl has been attached to the client player.
+
 MUST be sent ONCE per session.
 
 ```jsonc
@@ -106,7 +119,8 @@ MUST be sent ONCE per session.
 
 #### loaded
 
-This is sent when there is enough buffered content for the player to play the contentUrl.
+Sent when there is enough buffered content for the player to start playing the content.
+
 MUST be sent ONCE per session.
 
 ```jsonc
@@ -121,7 +135,7 @@ MUST be sent ONCE per session.
 
 #### playing
 
-Sent when playback start/resumes, when the playhead starts to move.
+Sent when playback starts or resumes, when the playhead starts to move.
 
 ```jsonc
 {
@@ -135,7 +149,9 @@ Sent when playback start/resumes, when the playhead starts to move.
 
 #### paused
 
-Sent when the player is paused due to a pause request, not when eg. buffering.
+Sent when the player is paused due to a pause request. 
+
+Shoult not be sent when playback stops for other reasons, e.g. buffering or seeking.
 
 ```jsonc
 {
@@ -149,7 +165,9 @@ Sent when the player is paused due to a pause request, not when eg. buffering.
 
 #### buffering
 
-Sent when the player starts buffering. Any buffering that happens when seeking or loading should not be sent as `buffering`.
+Sent when the player starts buffering. Buffering that happens when seeking or loading should be ignored.
+
+Note, since it is possible to `pause` during buffering, the corresponding `playing` should not trigger until after `buffered`, since that is when the playhead can start moving again.
 
 ```jsonc
 {
@@ -163,7 +181,9 @@ Sent when the player starts buffering. Any buffering that happens when seeking o
 
 #### buffered
 
-Sent when the player resumes playback after buffering. If the buffering is interrupted `buffered` should NOT be sent. 
+Sent when the player has finished buffering.
+
+If the buffering is interrupted, for example by `seeking` or `stopped`, `buffered` should NOT be sent.
 
 ```jsonc
 {
@@ -177,27 +197,35 @@ Sent when the player resumes playback after buffering. If the buffering is inter
 
 #### seeking
 
-This is sent when the player starts seeking to a new playhead time. `playhead` MUST be the current playhead time NOT the target playhead time. MUST not be sent during `loading`.
+Sent when the player starts seeking to a new playhead time. 
+
+The `playhead` MUST be the current playhead time NOT the target playhead time.
+
+Note, since it is possible to `pause` during seeking, the corresponding `playing` should not trigger until after `seeked`, since that is when the playhead can start moving again.
+
+MUST not be sent during `loading`.
 
 ```jsonc
 {
   event: "seeking",
   sessionId: "",
   timestamp: 0,
-  playhead: 0,
+  playhead: 0, // the current playhead
   duration: 0
 }
 ```
 
 #### seeked
 
-Sent when the player starts seeking to a new playhead time. `playhead` MUST be new playhead time.
+Sent when the player has finished seeking to the new playhead time and is ready to start playing.
+
+`playhead` MUST be the new playhead time.
 
 ```jsonc
 {
   event: "seeked",
   sessionId: "",
-  timestamp: 0,
+  timestamp: 0, // the new playhead
   playhead: 0,
   duration: 0
 }
@@ -205,7 +233,7 @@ Sent when the player starts seeking to a new playhead time. `playhead` MUST be n
 
 #### bitrate_changed
 
-Sent when the player switches between different ABR levels.
+Sent when the player successfully switches to a new bitrate.
 
 ```jsonc
 {
@@ -226,7 +254,7 @@ Sent when the player switches between different ABR levels.
 
 #### stopped
 
-Sent when playback stops for whatever reason. 
+Sent when playback stops.
 
 ```jsonc
 {
@@ -236,14 +264,16 @@ Sent when playback stops for whatever reason.
   playhead: 0,
   duration: 0,
   payload: {
-    reason?: "", // eg. "ended", "aborted", "error"
+    reason: "", // eg. "ended", "aborted", "error"
   }
 }
 ```
 
 #### error
 
-Sent when a fatal error occurs the `stopped` event SHOULD be sent with `reason: "error"`.
+Sent when a fatal error occurs. 
+
+The following `stopped` event SHOULD be sent with `reason: "error"`.
 
 ```jsonc
 {
@@ -263,8 +293,9 @@ Sent when a fatal error occurs the `stopped` event SHOULD be sent with `reason: 
 
 #### warning
 
-Sent when a non-fatal error occurs, eg. a subtitle track doesn't work but the player is still able to play the content or a playback error that the player can recover
-from without interruption.
+Sent when a non-fatal error occurs. 
+
+A playback error that the player can recover from without interruption.
 
 ```jsonc
 {

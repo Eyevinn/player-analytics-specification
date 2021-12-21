@@ -1,7 +1,7 @@
 import { TBaseEvent } from "./base";
 
 type TStoppedEventPayload = {
-  reason?: string;
+  reason: "error" | "ended" | "aborted" | "unknown" | string;
 }
 
 export type TStoppedEvent = TBaseEvent & {
