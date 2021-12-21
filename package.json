@@ -1,5 +1,5 @@
 {
-  "name": "player-analytics-specification",
+  "name": "@eyevinn/player-analytics-specification",
   "version": "0.2.0",
   "description": "Eyevinn Player Analytics Specification",
   "main": "index.js",
