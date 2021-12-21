@@ -645,7 +645,7 @@
 			"sources": [
 				{
 					"fileName": "event/base.d.ts",
-					"line": 21,
+					"line": 22,
 					"character": 12
 				}
 			],
@@ -667,7 +667,7 @@
 							"sources": [
 								{
 									"fileName": "event/base.d.ts",
-									"line": 24,
+									"line": 25,
 									"character": 2
 								}
 							],
@@ -686,7 +686,7 @@
 							"sources": [
 								{
 									"fileName": "event/base.d.ts",
-									"line": 23,
+									"line": 24,
 									"character": 2
 								}
 							],
@@ -705,7 +705,7 @@
 							"sources": [
 								{
 									"fileName": "event/base.d.ts",
-									"line": 25,
+									"line": 26,
 									"character": 2
 								}
 							],
@@ -724,7 +724,7 @@
 							"sources": [
 								{
 									"fileName": "event/base.d.ts",
-									"line": 22,
+									"line": 23,
 									"character": 2
 								}
 							],
@@ -750,7 +750,7 @@
 					"sources": [
 						{
 							"fileName": "event/base.d.ts",
-							"line": 21,
+							"line": 22,
 							"character": 25
 						}
 					]
@@ -1413,6 +1413,10 @@
 					{
 						"type": "literal",
 						"value": "seeked"
+					},
+					{
+						"type": "literal",
+						"value": "stopped"
 					},
 					{
 						"type": "literal",
@@ -2437,9 +2441,7 @@
 							"name": "reason",
 							"kind": 1024,
 							"kindString": "Property",
-							"flags": {
-								"isOptional": true
-							},
+							"flags": {},
 							"sources": [
 								{
 									"fileName": "event/stopped.d.ts",
@@ -2448,8 +2450,29 @@
 								}
 							],
 							"type": {
-								"type": "intrinsic",
-								"name": "string"
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": "error"
+									},
+									{
+										"type": "literal",
+										"value": "ended"
+									},
+									{
+										"type": "literal",
+										"value": "aborted"
+									},
+									{
+										"type": "literal",
+										"value": "unknown"
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
 							}
 						}
 					],
