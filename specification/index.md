@@ -151,7 +151,7 @@ Sent when playback starts or resumes, when the playhead starts to move.
 
 Sent when the player is paused due to a pause request. 
 
-Shoult not be sent when playback stops for other reasons, e.g. buffering or seeking.
+Should not be sent when playback stops for other reasons, e.g. buffering or seeking.
 
 ```jsonc
 {
