@@ -72,6 +72,15 @@ MUST be a unique sessionId.
 }
 ```
 
+To communicate back the expected [heartbeat](#heartbeat) interval to the client, as well as the `sessionId` for the initiated session, those values should be sent back to the client as a json response.
+
+```jsonc
+{
+  sessionId: "", // either sent in by the client, or generated in the backend
+  heartbeatInterval: 3000 // the interval of which the server expects heartbeats from the client
+}
+```
+
 #### heartbeat
 
 MUST be Sent at a fixed interval using the provided value from the `init` event response. The interval SHOULD be agreed upon between client & server.
