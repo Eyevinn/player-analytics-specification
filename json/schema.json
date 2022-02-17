@@ -27,6 +27,9 @@
                 "loading": {
                     "type": "object"
                 },
+                "metadata": {
+                    "type": "object"
+                },
                 "pause": {
                     "type": "object"
                 },
@@ -276,42 +279,6 @@
                                         "init"
                                     ],
                                     "type": "string"
-                                },
-                                "payload": {
-                                    "allOf": [
-                                        {
-                                            "$ref": "#/definitions/Record<string,any>"
-                                        },
-                                        {
-                                            "properties": {
-                                                "contentId": {
-                                                    "type": "string"
-                                                },
-                                                "contentUrl": {
-                                                    "type": "string"
-                                                },
-                                                "deviceId": {
-                                                    "type": "string"
-                                                },
-                                                "deviceModel": {
-                                                    "type": "string"
-                                                },
-                                                "deviceType": {
-                                                    "type": "string"
-                                                },
-                                                "drmType": {
-                                                    "type": "string"
-                                                },
-                                                "live": {
-                                                    "type": "boolean"
-                                                },
-                                                "userId": {
-                                                    "type": "string"
-                                                }
-                                            },
-                                            "type": "object"
-                                        }
-                                    ]
                                 }
                             },
                             "type": "object"
@@ -593,6 +560,77 @@
                                         }
                                     },
                                     "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    ]
+                },
+                {
+                    "allOf": [
+                        {
+                            "properties": {
+                                "duration": {
+                                    "type": "number"
+                                },
+                                "playhead": {
+                                    "type": "number"
+                                },
+                                "sessionId": {
+                                    "type": "string"
+                                },
+                                "timestamp": {
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "event": {
+                                    "enum": [
+                                        "metadata"
+                                    ],
+                                    "type": "string"
+                                },
+                                "payload": {
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/definitions/Record<string,any>"
+                                        },
+                                        {
+                                            "properties": {
+                                                "contentId": {
+                                                    "type": "string"
+                                                },
+                                                "contentTitle": {
+                                                    "type": "string"
+                                                },
+                                                "contentUrl": {
+                                                    "type": "string"
+                                                },
+                                                "deviceId": {
+                                                    "type": "string"
+                                                },
+                                                "deviceModel": {
+                                                    "type": "string"
+                                                },
+                                                "deviceType": {
+                                                    "type": "string"
+                                                },
+                                                "drmType": {
+                                                    "type": "string"
+                                                },
+                                                "live": {
+                                                    "type": "boolean"
+                                                },
+                                                "userId": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    ]
                                 }
                             },
                             "type": "object"
