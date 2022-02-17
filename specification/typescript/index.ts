@@ -17,6 +17,7 @@ export * from "./event";
 
 export interface PlayerAnalyticsClientModule {
   init: (data: TInitEvent) => void;
+  metadata: (data: TMetadataEvent) => void;
   heartbeat: (data: THeartbeatEvent) => void;
   loading: (data: TLoadingEvent) => void;
   loaded: (data: TLoadedEvent) => void;
@@ -45,4 +46,5 @@ export type TPlayerAnalyticsEvent = TInitEvent |
   TBitrateChangedEvent |
   TErrorEvent |
   TWarningEvent |
-  TStoppedEvent;
+  TStoppedEvent |
+  TMetadataEvent;
