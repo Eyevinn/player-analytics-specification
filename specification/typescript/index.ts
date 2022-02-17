@@ -1,17 +1,20 @@
-import { TInitEvent } from "./event";
-import { THeartbeatEvent } from "./event";
-import { TStoppedEvent } from "./event";
-import { TLoadingEvent } from "./event";
-import { TLoadedEvent } from "./event";
-import { TPlayingEvent } from "./event";
-import { TPausedEvent } from "./event";
-import { TBufferingEvent } from "./event";
-import { TBufferedEvent } from "./event";
-import { TSeekingEvent } from "./event";
-import { TSeekedEvent } from "./event";
-import { TBitrateChangedEvent } from "./event";
-import { TErrorEvent } from "./event";
-import { TWarningEvent } from "./event";
+import type {
+  TInitEvent,
+  THeartbeatEvent,
+  TStoppedEvent,
+  TLoadingEvent,
+  TLoadedEvent,
+  TPlayingEvent,
+  TPausedEvent,
+  TBufferingEvent,
+  TBufferedEvent,
+  TSeekingEvent,
+  TSeekedEvent,
+  TBitrateChangedEvent,
+  TErrorEvent,
+  TWarningEvent,
+  TMetadataEvent
+} from "./event";
 
 export * from "./event";
 
