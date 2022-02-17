@@ -1,7 +1,6 @@
 import { TBaseEvent } from "./base";
 
 export type TInitEventPayload = Record<string, any> & {
-  live: boolean,
   contentId: string;
   contentUrl: string;
   drmType?: string;

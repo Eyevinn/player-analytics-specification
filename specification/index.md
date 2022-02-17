@@ -71,7 +71,6 @@ MUST be a unique sessionId.
   playhead: -1, // if the player has an expected startTime, eg. if user continues watching a movie, use that value here.
   duration: -1,
   payload: {
-    live: false,
     contentId: "",
     contentUrl: "",
     drmType?: "",
@@ -81,6 +80,29 @@ MUST be a unique sessionId.
     deviceType?: ""
     ... // additional parameters can be added as needed, however the server may choose to ignore them.
   }
+}
+```
+
+#### metadata
+
+Contains non-critical metadata connected to the session.
+
+Optional event that can be sent at any time. It is recommended to send it in the interval between the `init` and `stop` events.
+
+The server SHOULD merge metadata payloads with previous metadata payloads from the session.
+
+The server SHOULD handle `live` toggling from `true` to `false` (dynamic to static transitions).
+
+```jsonc
+{
+  sessionId: "",
+  timestamp: 0,
+  playhead: 0,
+  duration: 0,
+  payload: {
+    live?: false,
+    contentTitle?: "",
+  },
 }
 ```
 
@@ -119,7 +141,6 @@ MUST be sent ONCE per session.
   duration: 0,
 }
 ```
-
 
 #### loaded
 
