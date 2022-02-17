@@ -53,7 +53,11 @@ An analytics specification needs a reliable event flow, it is crucial that the f
 
 Sent when the client knows it should start a viewing session of content.
 
+This SHOULD be the first event sent by the client to the server.
+
 A restart of content SHOULD create a new session.
+
+The server SHOULD handle events arriving out of order. Each event carries a `sessionId` and a `timestamp` for ordering in post.
 
 MUST be sent ONCE per session.
 
