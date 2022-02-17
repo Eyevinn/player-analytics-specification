@@ -2,10 +2,9 @@
 
 The EPAS is an open specification that defines a standard for implementing analytics in any video/audio player.
 
-The specification consists of a JSON Scheme and an event flow. By implementing the specification, a player can send solid analytics data to any EPAS-compatible backend.
+By implementing the specification, a player can send analytics data to an EPAS-compatible backend.
 
-## Current version - 0.2
-The current version of the player analytics specification is [0.2](specification/index.md)
+The specification consists of a JSON schema, typescript definitions, and an event flow.
 
 ## About Eyevinn Technology
 
