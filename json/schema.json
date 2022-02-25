@@ -2,640 +2,674 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
         "PlayerAnalyticsClientModule": {
+            "additionalProperties": false,
             "properties": {
                 "bitrateChanged": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "buffered": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "buffering": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "error": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "heartbeat": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "init": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "loaded": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "loading": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "metadata": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "pause": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "playing": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "seeked": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "seeking": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "stopped": {
+                    "additionalProperties": false,
                     "type": "object"
                 },
                 "warning": {
+                    "additionalProperties": false,
                     "type": "object"
                 }
             },
+            "required": [
+                "bitrateChanged",
+                "buffered",
+                "buffering",
+                "error",
+                "heartbeat",
+                "init",
+                "loaded",
+                "loading",
+                "metadata",
+                "pause",
+                "playing",
+                "seeked",
+                "seeking",
+                "stopped",
+                "warning"
+            ],
             "type": "object"
         },
         "Record<string,any>": {
+            "additionalProperties": false,
             "type": "object"
         },
         "TPlayerAnalyticsEvent": {
             "anyOf": [
                 {
-                    "allOf": [
-                        { 
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
+                        },
+                        "event": {
+                            "enum": [
+                                "bitrate_changed"
+                            ],
+                            "type": "string"
+                        },
+                        "payload": {
+                            "additionalProperties": false,
                             "properties": {
-                                "duration": {
+                                "audioBitrate": {
                                     "type": "number"
                                 },
-                                "playhead": {
+                                "bitrate": {
                                     "type": "number"
                                 },
-                                "sessionId": {
-                                    "type": "string"
+                                "height": {
+                                    "type": "number"
                                 },
-                                "timestamp": {
+                                "videoBitrate": {
+                                    "type": "number"
+                                },
+                                "width": {
                                     "type": "number"
                                 }
                             },
+                            "required": [
+                                "bitrate"
+                            ],
                             "type": "object"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "bitrate_changed"
-                                    ],
-                                    "type": "string"
-                                },
-                                "payload": {
-                                    "properties": {
-                                        "audioBitrate": {
-                                            "type": "number"
-                                        },
-                                        "bitrate": {
-                                            "type": "number"
-                                        },
-                                        "height": {
-                                            "type": "number"
-                                        },
-                                        "videoBitrate": {
-                                            "type": "number"
-                                        },
-                                        "width": {
-                                            "type": "number"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            },
-                            "type": "object"
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "payload",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
-                            "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
-                                    "type": "string"
-                                },
-                                "timestamp": {
-                                    "type": "number"
-                                }
-                            },
-                            "type": "object"
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "buffered"
-                                    ],
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
+                        "event": {
+                            "enum": [
+                                "buffered"
+                            ],
+                            "type": "string"
+                        },
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
-                            "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
-                                    "type": "string"
-                                },
-                                "timestamp": {
-                                    "type": "number"
-                                }
-                            },
-                            "type": "object"
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "buffering"
-                                    ],
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
+                        "event": {
+                            "enum": [
+                                "buffering"
+                            ],
+                            "type": "string"
+                        },
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
+                        },
+                        "event": {
+                            "enum": [
+                                "error"
+                            ],
+                            "type": "string"
+                        },
+                        "payload": {
+                            "additionalProperties": false,
                             "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
+                                "category": {
                                     "type": "string"
                                 },
-                                "timestamp": {
-                                    "type": "number"
+                                "code": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Record<string,any>"
+                                },
+                                "message": {
+                                    "type": "string"
                                 }
                             },
+                            "required": [
+                                "code"
+                            ],
                             "type": "object"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "error"
-                                    ],
-                                    "type": "string"
-                                },
-                                "payload": {
-                                    "properties": {
-                                        "category": {
-                                            "type": "string"
-                                        },
-                                        "code": {
-                                            "type": "string"
-                                        },
-                                        "data": {
-                                            "$ref": "#/definitions/Record<string,any>"
-                                        },
-                                        "message": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            },
-                            "type": "object"
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "payload",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
-                            "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
-                                    "type": "string"
-                                },
-                                "timestamp": {
-                                    "type": "number"
-                                }
-                            },
-                            "type": "object"
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "heartbeat"
-                                    ],
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
+                        "event": {
+                            "enum": [
+                                "heartbeat"
+                            ],
+                            "type": "string"
+                        },
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
-                            "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
-                                    "type": "string"
-                                },
-                                "timestamp": {
-                                    "type": "number"
-                                }
-                            },
-                            "type": "object"
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "init"
-                                    ],
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
+                        "event": {
+                            "enum": [
+                                "init"
+                            ],
+                            "type": "string"
+                        },
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
-                            "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
-                                    "type": "string"
-                                },
-                                "timestamp": {
-                                    "type": "number"
-                                }
-                            },
-                            "type": "object"
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "loaded"
-                                    ],
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
+                        "event": {
+                            "enum": [
+                                "loaded"
+                            ],
+                            "type": "string"
+                        },
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
-                            "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
-                                    "type": "string"
-                                },
-                                "timestamp": {
-                                    "type": "number"
-                                }
-                            },
-                            "type": "object"
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "loading"
-                                    ],
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
+                        "event": {
+                            "enum": [
+                                "loading"
+                            ],
+                            "type": "string"
+                        },
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
-                            "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
-                                    "type": "string"
-                                },
-                                "timestamp": {
-                                    "type": "number"
-                                }
-                            },
-                            "type": "object"
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "paused"
-                                    ],
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
+                        "event": {
+                            "enum": [
+                                "paused"
+                            ],
+                            "type": "string"
+                        },
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
-                            "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
-                                    "type": "string"
-                                },
-                                "timestamp": {
-                                    "type": "number"
-                                }
-                            },
-                            "type": "object"
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "playing"
-                                    ],
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
+                        "event": {
+                            "enum": [
+                                "playing"
+                            ],
+                            "type": "string"
+                        },
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
-                            "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
-                                    "type": "string"
-                                },
-                                "timestamp": {
-                                    "type": "number"
-                                }
-                            },
-                            "type": "object"
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "seeked"
-                                    ],
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
+                        "event": {
+                            "enum": [
+                                "seeked"
+                            ],
+                            "type": "string"
+                        },
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
-                            "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
-                                    "type": "string"
-                                },
-                                "timestamp": {
-                                    "type": "number"
-                                }
-                            },
-                            "type": "object"
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "seeking"
-                                    ],
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
+                        "event": {
+                            "enum": [
+                                "seeking"
+                            ],
+                            "type": "string"
+                        },
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
+                        },
+                        "event": {
+                            "enum": [
+                                "stopped"
+                            ],
+                            "type": "string"
+                        },
+                        "payload": {
+                            "additionalProperties": false,
                             "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
+                                "reason": {
                                     "type": "string"
-                                },
-                                "timestamp": {
-                                    "type": "number"
                                 }
                             },
+                            "required": [
+                                "reason"
+                            ],
                             "type": "object"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "stopped"
-                                    ],
-                                    "type": "string"
-                                },
-                                "payload": {
-                                    "properties": {
-                                        "reason": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            },
-                            "type": "object"
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "payload",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
+                        },
+                        "event": {
+                            "enum": [
+                                "warning"
+                            ],
+                            "type": "string"
+                        },
+                        "payload": {
+                            "additionalProperties": false,
                             "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
+                                "category": {
                                     "type": "string"
                                 },
-                                "timestamp": {
-                                    "type": "number"
+                                "code": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Record<string,any>"
+                                },
+                                "message": {
+                                    "type": "string"
                                 }
                             },
+                            "required": [
+                                "code"
+                            ],
                             "type": "object"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "warning"
-                                    ],
-                                    "type": "string"
-                                },
-                                "payload": {
-                                    "properties": {
-                                        "category": {
-                                            "type": "string"
-                                        },
-                                        "code": {
-                                            "type": "string"
-                                        },
-                                        "data": {
-                                            "$ref": "#/definitions/Record<string,any>"
-                                        },
-                                        "message": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            },
-                            "type": "object"
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "payload",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 },
                 {
-                    "allOf": [
-                        {
+                    "additionalProperties": false,
+                    "properties": {
+                        "duration": {
+                            "type": "number"
+                        },
+                        "event": {
+                            "enum": [
+                                "metadata"
+                            ],
+                            "type": "string"
+                        },
+                        "payload": {
+                            "additionalProperties": false,
                             "properties": {
-                                "duration": {
-                                    "type": "number"
-                                },
-                                "playhead": {
-                                    "type": "number"
-                                },
-                                "sessionId": {
+                                "contentId": {
                                     "type": "string"
                                 },
-                                "timestamp": {
-                                    "type": "number"
+                                "contentTitle": {
+                                    "type": "string"
+                                },
+                                "contentUrl": {
+                                    "type": "string"
+                                },
+                                "deviceId": {
+                                    "type": "string"
+                                },
+                                "deviceModel": {
+                                    "type": "string"
+                                },
+                                "deviceType": {
+                                    "type": "string"
+                                },
+                                "drmType": {
+                                    "type": "string"
+                                },
+                                "live": {
+                                    "type": "boolean"
+                                },
+                                "userId": {
+                                    "type": "string"
                                 }
                             },
                             "type": "object"
                         },
-                        {
-                            "properties": {
-                                "event": {
-                                    "enum": [
-                                        "metadata"
-                                    ],
-                                    "type": "string"
-                                },
-                                "payload": {
-                                    "allOf": [
-                                        {
-                                            "$ref": "#/definitions/Record<string,any>"
-                                        },
-                                        {
-                                            "properties": {
-                                                "contentId": {
-                                                    "type": "string"
-                                                },
-                                                "contentTitle": {
-                                                    "type": "string"
-                                                },
-                                                "contentUrl": {
-                                                    "type": "string"
-                                                },
-                                                "deviceId": {
-                                                    "type": "string"
-                                                },
-                                                "deviceModel": {
-                                                    "type": "string"
-                                                },
-                                                "deviceType": {
-                                                    "type": "string"
-                                                },
-                                                "drmType": {
-                                                    "type": "string"
-                                                },
-                                                "live": {
-                                                    "type": "boolean"
-                                                },
-                                                "userId": {
-                                                    "type": "string"
-                                                }
-                                            },
-                                            "type": "object"
-                                        }
-                                    ]
-                                }
-                            },
-                            "type": "object"
+                        "playhead": {
+                            "type": "number"
+                        },
+                        "sessionId": {
+                            "type": "string"
+                        },
+                        "timestamp": {
+                            "type": "number"
                         }
-                    ]
+                    },
+                    "required": [
+                        "duration",
+                        "event",
+                        "payload",
+                        "playhead",
+                        "sessionId",
+                        "timestamp"
+                    ],
+                    "type": "object"
                 }
             ]
         }
