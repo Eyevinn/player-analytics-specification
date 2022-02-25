@@ -58,7 +58,7 @@
             "anyOf": [
                 {
                     "allOf": [
-                        {
+                        { 
                             "properties": {
                                 "duration": {
                                     "type": "number"
