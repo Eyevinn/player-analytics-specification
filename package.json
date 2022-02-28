@@ -12,7 +12,7 @@
   "license": "Apache License 2.0",
   "scripts": {
     "typedoc": "typedoc",
-    "json": "typescript-json-schema specification/typescript/index.ts \"*\""
+    "json": "typescript-json-schema specification/typescript/index.ts \"*\" --noExtraProps --required"
   },
   "dependencies": {
     "typedoc": "^0.22.8",
