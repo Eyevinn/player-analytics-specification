@@ -248,6 +248,8 @@ Sent when the player has finished seeking to the new playhead time and is ready 
 
 #### bitrate_changed
 
+Can be sent after loaded event, before the stopped event.
+
 Sent when the player successfully switches to a new bitrate.
 
 ```jsonc
