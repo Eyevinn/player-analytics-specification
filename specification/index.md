@@ -260,11 +260,11 @@ Sent when the player successfully switches to a new bitrate.
   playhead: 0,
   duration: 0,
   payload: {
-    bitrate: "", // bitrate in Kbps
-    width?: "", // video width in pixels
-    height?: "", // video height in pixels
-    videoBitrate?: "", // if available provide the bitrate for the video track
-    audioBitrate?: "", // if available provide the bitrate for the audio track
+    bitrate: 0, // bitrate in Kbps
+    width?: 0, // video width in pixels
+    height?: 0, // video height in pixels
+    videoBitrate?: 0, // if available provide the bitrate for the video track
+    audioBitrate?: 0, // if available provide the bitrate for the audio track
   }
 }
 ```
