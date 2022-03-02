@@ -1,6 +1,6 @@
 {
   "name": "@eyevinn/player-analytics-specification",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Eyevinn Player Analytics Specification",
   "main": "index.js",
   "types": "./specification/typescript/index.ts",
