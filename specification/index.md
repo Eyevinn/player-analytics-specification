@@ -273,6 +273,8 @@ Sent when the player successfully switches to a new bitrate.
 
 Sent when playback stops.
 
+Can be sent after init.
+
 ```jsonc
 {
   event: "stopped",
