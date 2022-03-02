@@ -70,16 +70,6 @@ MUST be a unique sessionId.
   timestamp: -1,
   playhead: -1, // if the player has an expected startTime, eg. if user continues watching a movie, use that value here.
   duration: -1,
-  payload: {
-    contentId: "",
-    contentUrl: "",
-    drmType?: "",
-    userId?: "", 
-    deviceId?: ""
-    deviceModel?: ""
-    deviceType?: ""
-    ... // additional parameters can be added as needed, however the server may choose to ignore them.
-  }
 }
 ```
 
