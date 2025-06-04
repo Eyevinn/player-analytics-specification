@@ -6,7 +6,7 @@ EPAS is an open specification that defines a standard for implementing analytics
 
 See the [Specification README](specification/README.md).
 
-The specification consists of typescript definitions, a generated JSON schema, documentation , and an event flow.
+The specification consists of typescript definitions, a generated JSON schema, documentation, and an event flow.
 
 The specification is strictly for tracking playback quality using a concise set of events, that must follow a predictable sequence.
 
@@ -16,7 +16,7 @@ The specification makes no assumptions about metadata surrounding quality tracki
 
 The specification can be added as a direct dependency to a Node/Deno based project, or it can be downloaded as an artifact from the github releases page.
 
-The event specification can be consumed directly as a set of TypeScript types or a JSON schema, or as documentation reference for an integration.
+The event specification can be consumed directly as a set of TypeScript types or JSON schema, or as a reference documentation for an integration.
 
 See [Releases](https://github.com/Eyevinn/player-analytics-specification/releases), or use `npm i @eyevinn/player-analytics-specification`.
 
