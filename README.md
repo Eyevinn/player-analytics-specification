@@ -1,6 +1,17 @@
-# Eyevinn Player Analytics Specification ( EPAS )
+# Open Analytics Specification
 
-EPAS is an open specification that defines a standard for implementing analytics in any media player. By implementing the specification, a player can send analytics data to an EPAS-compatible backend.
+[Eyevinn Open Analytics](https://docs.osaas.io/osaas.wiki/Solution%3A-Eyevinn-Open-Analytics.html) is an open specification that defines a standard for implementing analytics in any media player. By implementing the specification, a player can send analytics data to an Open Analytics compatible backend. See [demo](https://analytics.demo.osaas.io/). Reference integrations are available for:
+
+**Client**
+
+[Open Analytics Web Player SDK](https://github.com/Eyevinn/player-analytics-client-sdk-web)
+[Open Analytics Android Player SDK](https://github.com/Eyevinn/player-analytics-client-sdk-android)
+[Open Analytics iOS Player SDK](https://github.com/Eyevinn/player-analytics-client-sdk-swift)
+
+**Server**
+
+[Open Analytics Event Sink](https://github.com/Eyevinn/player-analytics-eventsink)
+[Open Analytics Worker](https://github.com/Eyevinn/player-analytics-worker)
 
 ## Specification
 
