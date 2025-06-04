@@ -5,12 +5,15 @@
 **Client**
 
 [Open Analytics Web Player SDK](https://github.com/Eyevinn/player-analytics-client-sdk-web)
+
 [Open Analytics Android Player SDK](https://github.com/Eyevinn/player-analytics-client-sdk-android)
+
 [Open Analytics iOS Player SDK](https://github.com/Eyevinn/player-analytics-client-sdk-swift)
 
 **Server**
 
 [Open Analytics Event Sink](https://github.com/Eyevinn/player-analytics-eventsink)
+
 [Open Analytics Worker](https://github.com/Eyevinn/player-analytics-worker)
 
 ## Specification
