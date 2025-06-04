@@ -1,10 +1,30 @@
 # Eyevinn Player Analytics Specification ( EPAS )
 
-The EPAS is an open specification that defines a standard for implementing analytics in any video/audio player.
+EPAS is an open specification that defines a standard for implementing analytics in any media player. By implementing the specification, a player can send analytics data to an EPAS-compatible backend.
 
-By implementing the specification, a player can send analytics data to an EPAS-compatible backend.
+## Specification
 
-The specification consists of a JSON schema, typescript definitions, and an event flow.
+See the [Specification README](specification/README.md).
+
+The specification consists of typescript definitions, a generated JSON schema, documentation , and an event flow.
+
+The specification is strictly for tracking playback quality using a concise set of events, that must follow a predictable sequence.
+
+The specification makes no assumptions about metadata surrounding quality tracking, like device type, user agent, or operating system version. Metadata is considered implementation specific. The specification is designed to allow for custom metadata to be added to a session at any time, see [Metadata Event](specification/README.md#metadata).
+
+## Contributing
+
+We welcome contributions, and recommend creating a Github Issue to discuss changes before starting work. This helps ensure that the changes align with the goals of the specification, and that we can provide guidance on implementation.
+
+The specification is written in TypeScript, and requires a Node.js environment with Yarn to build and test. To transform the specification into a JSON schema, use the `npm run json` command.
+
+Contributions should:
+
+- Update the TypeScript definitions in `/specification`
+- Update the README in `/specification`
+- Run `npm run json` to generate an updated JSON schema
+- Run `npm run typedoc` to generate updated documentation
+- OPTIONAL: Update the flowchart in `/specification/flowchart.md`
 
 ## About Eyevinn Technology
 
