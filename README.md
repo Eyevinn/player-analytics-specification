@@ -12,6 +12,14 @@ The specification is strictly for tracking playback quality using a concise set 
 
 The specification makes no assumptions about metadata surrounding quality tracking, like device type, user agent, or operating system version. Metadata is considered implementation specific. The specification is designed to allow for custom metadata to be added to a session at any time, see [Metadata Event](specification/README.md#metadata).
 
+## Using in a Project
+
+The specification can be added as a direct dependency to a Node/Deno based project, or it can be downloaded as an artifact from the github releases page.
+
+The event specification can be consumed directly as a set of TypeScript types or a JSON schema, or as documentation reference for an integration.
+
+See [Releases](https://github.com/Eyevinn/player-analytics-specification/releases), or use `npm i @eyevinn/player-analytics-specification`.
+
 ## Contributing
 
 We welcome contributions, and recommend creating a Github Issue to discuss changes before starting work. This helps ensure that the changes align with the goals of the specification, and that we can provide guidance on implementation.
