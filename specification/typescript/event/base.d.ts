@@ -24,4 +24,24 @@ export type TBaseEvent = {
   playhead: Seconds;
   duration: Seconds;
   sessionId: UUID;
-}
+  playerSource: string;
+  domain: string;
+  path: string;
+  contentId: string | number;
+  contentTitle: string;
+  videoDuration: number;
+  videoBitrate: number;
+  audioBitrate: number;
+  platform: string;
+  browser: string;
+  deviceClass: string;
+  operatingSystem: string;
+  deviceType: string;
+  userId: string;
+  userType: string;
+  geoLocation: string;
+  duration: number;
+  live: boolean;
+  metaDataId: string;
+  audioLanguage: string;
+};

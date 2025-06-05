@@ -5,63 +5,63 @@
             "additionalProperties": false,
             "properties": {
                 "bitrateChanged": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "buffered": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "buffering": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "error": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "heartbeat": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "init": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "loaded": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "loading": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "metadata": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "pause": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "playing": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "seeked": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "seeking": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "stopped": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 },
                 "warning": {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "type": "object"
                 }
             },
@@ -85,13 +85,13 @@
             "type": "object"
         },
         "Record<string,any>": {
-            "additionalProperties": false,
+            "additionalProperties": true,
             "type": "object"
         },
         "TPlayerAnalyticsEvent": {
             "anyOf": [
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -147,7 +147,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -178,7 +178,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -209,7 +209,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -262,7 +262,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -293,7 +293,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -324,7 +324,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -355,7 +355,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -386,7 +386,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -417,7 +417,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -448,7 +448,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -479,7 +479,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -510,7 +510,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -554,7 +554,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
@@ -607,7 +607,7 @@
                     "type": "object"
                 },
                 {
-                    "additionalProperties": false,
+                    "additionalProperties": true,
                     "properties": {
                         "duration": {
                             "type": "number"
