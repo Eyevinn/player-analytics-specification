@@ -4,7 +4,7 @@
 
 **Client**
 
-[Open Analytics Web Player SDK](https://github.com/Eyevinn/player-analytics-client-sdk-web)
+[Open Analytics Web Player SDK](https://github.com/Eyevinn/player-analytics-client-sdk-web) (based on the specification compliant [eyevinn/media-event-filter](https://github.com/Eyevinn/media-event-filter))
 
 [Open Analytics Android Player SDK](https://github.com/Eyevinn/player-analytics-client-sdk-android)
 
