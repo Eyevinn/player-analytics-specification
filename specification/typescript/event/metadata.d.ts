@@ -1,6 +1,6 @@
 import { TBaseEvent } from "./base";
 
-export type TMetadataEventPayload = Record<string, any> & {
+export type TMetadataEventPayload = {
   live?: boolean;
   contentTitle?: string;
   contentId?: string;
@@ -10,6 +10,7 @@ export type TMetadataEventPayload = Record<string, any> & {
   deviceId?: string;
   deviceModel?: string;
   deviceType?: string;
+  [key: string]: string | boolean; // Allow additional metadata properties
 }
 
 export type TMetadataEvent = TBaseEvent & {
