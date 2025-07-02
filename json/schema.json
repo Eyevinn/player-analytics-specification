@@ -619,7 +619,12 @@
                             "type": "string"
                         },
                         "payload": {
-                            "additionalProperties": false,
+                            "additionalProperties": {
+                                "type": [
+                                    "string",
+                                    "boolean"
+                                ]
+                            },
                             "properties": {
                                 "contentId": {
                                     "type": "string"
@@ -675,3 +680,4 @@
         }
     }
 }
+
