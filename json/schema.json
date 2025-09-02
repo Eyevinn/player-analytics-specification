@@ -132,6 +132,9 @@
                         "sessionId": {
                             "type": "string"
                         },
+                        "shardId": {
+                            "type": "string"
+                        },
                         "timestamp": {
                             "type": "number"
                         }
@@ -164,6 +167,9 @@
                         "sessionId": {
                             "type": "string"
                         },
+                        "shardId": {
+                            "type": "string"
+                        },
                         "timestamp": {
                             "type": "number"
                         }
@@ -193,6 +199,9 @@
                             "type": "number"
                         },
                         "sessionId": {
+                            "type": "string"
+                        },
+                        "shardId": {
                             "type": "string"
                         },
                         "timestamp": {
@@ -247,6 +256,9 @@
                         "sessionId": {
                             "type": "string"
                         },
+                        "shardId": {
+                            "type": "string"
+                        },
                         "timestamp": {
                             "type": "number"
                         }
@@ -277,6 +289,9 @@
                             "type": "number"
                         },
                         "sessionId": {
+                            "type": "string"
+                        },
+                        "shardId": {
                             "type": "string"
                         },
                         "timestamp": {
@@ -310,6 +325,9 @@
                         "sessionId": {
                             "type": "string"
                         },
+                        "shardId": {
+                            "type": "string"
+                        },
                         "timestamp": {
                             "type": "number"
                         }
@@ -339,6 +357,9 @@
                             "type": "number"
                         },
                         "sessionId": {
+                            "type": "string"
+                        },
+                        "shardId": {
                             "type": "string"
                         },
                         "timestamp": {
@@ -372,6 +393,9 @@
                         "sessionId": {
                             "type": "string"
                         },
+                        "shardId": {
+                            "type": "string"
+                        },
                         "timestamp": {
                             "type": "number"
                         }
@@ -401,6 +425,9 @@
                             "type": "number"
                         },
                         "sessionId": {
+                            "type": "string"
+                        },
+                        "shardId": {
                             "type": "string"
                         },
                         "timestamp": {
@@ -434,6 +461,9 @@
                         "sessionId": {
                             "type": "string"
                         },
+                        "shardId": {
+                            "type": "string"
+                        },
                         "timestamp": {
                             "type": "number"
                         }
@@ -465,6 +495,9 @@
                         "sessionId": {
                             "type": "string"
                         },
+                        "shardId": {
+                            "type": "string"
+                        },
                         "timestamp": {
                             "type": "number"
                         }
@@ -494,6 +527,9 @@
                             "type": "number"
                         },
                         "sessionId": {
+                            "type": "string"
+                        },
+                        "shardId": {
                             "type": "string"
                         },
                         "timestamp": {
@@ -537,6 +573,9 @@
                             "type": "number"
                         },
                         "sessionId": {
+                            "type": "string"
+                        },
+                        "shardId": {
                             "type": "string"
                         },
                         "timestamp": {
@@ -590,6 +629,9 @@
                             "type": "number"
                         },
                         "sessionId": {
+                            "type": "string"
+                        },
+                        "shardId": {
                             "type": "string"
                         },
                         "timestamp": {
@@ -660,6 +702,9 @@
                             "type": "number"
                         },
                         "sessionId": {
+                            "type": "string"
+                        },
+                        "shardId": {
                             "type": "string"
                         },
                         "timestamp": {
