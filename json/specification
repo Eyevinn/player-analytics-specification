@@ -370,7 +370,7 @@
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 137,
+										"id": 141,
 										"name": "TMetadataEvent"
 									}
 								}
@@ -679,7 +679,25 @@
 			}
 		},
 		{
-			"id": 120,
+			"id": 119,
+			"name": "ShardId",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/base.d.ts",
+					"line": 4,
+					"character": 5
+				}
+			],
+			"type": {
+				"type": "intrinsic",
+				"name": "string"
+			}
+		},
+		{
+			"id": 121,
 			"name": "TBaseEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -687,22 +705,41 @@
 			"sources": [
 				{
 					"fileName": "event/base.d.ts",
-					"line": 22,
+					"line": 23,
 					"character": 12
 				}
 			],
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 121,
+					"id": 122,
 					"name": "__type",
 					"kind": 65536,
 					"kindString": "Type literal",
 					"flags": {},
 					"children": [
 						{
-							"id": 124,
+							"id": 125,
 							"name": "duration",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "event/base.d.ts",
+									"line": 26,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 118,
+								"name": "Seconds"
+							}
+						},
+						{
+							"id": 124,
+							"name": "playhead",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
@@ -720,26 +757,7 @@
 							}
 						},
 						{
-							"id": 123,
-							"name": "playhead",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "event/base.d.ts",
-									"line": 24,
-									"character": 2
-								}
-							],
-							"type": {
-								"type": "reference",
-								"id": 118,
-								"name": "Seconds"
-							}
-						},
-						{
-							"id": 125,
+							"id": 126,
 							"name": "sessionId",
 							"kind": 1024,
 							"kindString": "Property",
@@ -747,7 +765,7 @@
 							"sources": [
 								{
 									"fileName": "event/base.d.ts",
-									"line": 26,
+									"line": 27,
 									"character": 2
 								}
 							],
@@ -758,7 +776,28 @@
 							}
 						},
 						{
-							"id": 122,
+							"id": 127,
+							"name": "shardId",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/base.d.ts",
+									"line": 28,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 119,
+								"name": "ShardId"
+							}
+						},
+						{
+							"id": 123,
 							"name": "timestamp",
 							"kind": 1024,
 							"kindString": "Property",
@@ -766,7 +805,7 @@
 							"sources": [
 								{
 									"fileName": "event/base.d.ts",
-									"line": 23,
+									"line": 24,
 									"character": 2
 								}
 							],
@@ -782,17 +821,18 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								124,
-								123,
 								125,
-								122
+								124,
+								126,
+								127,
+								123
 							]
 						}
 					],
 					"sources": [
 						{
 							"fileName": "event/base.d.ts",
-							"line": 22,
+							"line": 23,
 							"character": 25
 						}
 					]
@@ -817,7 +857,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1051,7 +1091,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1121,7 +1161,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1191,7 +1231,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1397,7 +1437,7 @@
 			}
 		},
 		{
-			"id": 119,
+			"id": 120,
 			"name": "TEventType",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1405,7 +1445,7 @@
 			"sources": [
 				{
 					"fileName": "event/base.d.ts",
-					"line": 5,
+					"line": 6,
 					"character": 12
 				}
 			],
@@ -1493,7 +1533,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1563,7 +1603,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1633,7 +1673,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1703,7 +1743,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1756,7 +1796,7 @@
 			}
 		},
 		{
-			"id": 137,
+			"id": 141,
 			"name": "TMetadataEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1764,7 +1804,7 @@
 			"sources": [
 				{
 					"fileName": "event/metadata.d.ts",
-					"line": 15,
+					"line": 16,
 					"character": 12
 				}
 			],
@@ -1773,39 +1813,21 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 138,
+							"id": 142,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 139,
+									"id": 143,
 									"name": "event",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {},
-									"sources": [
-										{
-											"fileName": "event/metadata.d.ts",
-											"line": 16,
-											"character": 2
-										}
-									],
-									"type": {
-										"type": "literal",
-										"value": "metadata"
-									}
-								},
-								{
-									"id": 140,
-									"name": "payload",
 									"kind": 1024,
 									"kindString": "Property",
 									"flags": {},
@@ -1817,8 +1839,26 @@
 										}
 									],
 									"type": {
+										"type": "literal",
+										"value": "metadata"
+									}
+								},
+								{
+									"id": 144,
+									"name": "payload",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "event/metadata.d.ts",
+											"line": 18,
+											"character": 2
+										}
+									],
+									"type": {
 										"type": "reference",
-										"id": 126,
+										"id": 128,
 										"name": "TMetadataEventPayload"
 									}
 								}
@@ -1828,15 +1868,15 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										139,
-										140
+										143,
+										144
 									]
 								}
 							],
 							"sources": [
 								{
 									"fileName": "event/metadata.d.ts",
-									"line": 15,
+									"line": 16,
 									"character": 42
 								}
 							]
@@ -1846,7 +1886,7 @@
 			}
 		},
 		{
-			"id": 126,
+			"id": 128,
 			"name": "TMetadataEventPayload",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1859,239 +1899,252 @@
 				}
 			],
 			"type": {
-				"type": "intersection",
-				"types": [
-					{
-						"type": "reference",
-						"typeArguments": [
-							{
-								"type": "intrinsic",
-								"name": "string"
+				"type": "reflection",
+				"declaration": {
+					"id": 129,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 132,
+							"name": "contentId",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
 							},
-							{
-								"type": "intrinsic",
-								"name": "any"
-							}
-						],
-						"name": "Record"
-					},
-					{
-						"type": "reflection",
-						"declaration": {
-							"id": 127,
-							"name": "__type",
-							"kind": 65536,
-							"kindString": "Type literal",
-							"flags": {},
-							"children": [
-								{
-									"id": 130,
-									"name": "contentId",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {
-										"isOptional": true
-									},
-									"sources": [
-										{
-											"fileName": "event/metadata.d.ts",
-											"line": 6,
-											"character": 2
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								},
-								{
-									"id": 129,
-									"name": "contentTitle",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {
-										"isOptional": true
-									},
-									"sources": [
-										{
-											"fileName": "event/metadata.d.ts",
-											"line": 5,
-											"character": 2
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								},
-								{
-									"id": 131,
-									"name": "contentUrl",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {
-										"isOptional": true
-									},
-									"sources": [
-										{
-											"fileName": "event/metadata.d.ts",
-											"line": 7,
-											"character": 2
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								},
-								{
-									"id": 134,
-									"name": "deviceId",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {
-										"isOptional": true
-									},
-									"sources": [
-										{
-											"fileName": "event/metadata.d.ts",
-											"line": 10,
-											"character": 2
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								},
-								{
-									"id": 135,
-									"name": "deviceModel",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {
-										"isOptional": true
-									},
-									"sources": [
-										{
-											"fileName": "event/metadata.d.ts",
-											"line": 11,
-											"character": 2
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								},
-								{
-									"id": 136,
-									"name": "deviceType",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {
-										"isOptional": true
-									},
-									"sources": [
-										{
-											"fileName": "event/metadata.d.ts",
-											"line": 12,
-											"character": 2
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								},
-								{
-									"id": 132,
-									"name": "drmType",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {
-										"isOptional": true
-									},
-									"sources": [
-										{
-											"fileName": "event/metadata.d.ts",
-											"line": 8,
-											"character": 2
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								},
-								{
-									"id": 128,
-									"name": "live",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {
-										"isOptional": true
-									},
-									"sources": [
-										{
-											"fileName": "event/metadata.d.ts",
-											"line": 4,
-											"character": 2
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "boolean"
-									}
-								},
-								{
-									"id": 133,
-									"name": "userId",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {
-										"isOptional": true
-									},
-									"sources": [
-										{
-											"fileName": "event/metadata.d.ts",
-											"line": 9,
-											"character": 2
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								}
-							],
-							"groups": [
-								{
-									"title": "Properties",
-									"kind": 1024,
-									"children": [
-										130,
-										129,
-										131,
-										134,
-										135,
-										136,
-										132,
-										128,
-										133
-									]
-								}
-							],
 							"sources": [
 								{
 									"fileName": "event/metadata.d.ts",
-									"line": 3,
-									"character": 58
+									"line": 6,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 131,
+							"name": "contentTitle",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/metadata.d.ts",
+									"line": 5,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 133,
+							"name": "contentUrl",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/metadata.d.ts",
+									"line": 7,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 136,
+							"name": "deviceId",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/metadata.d.ts",
+									"line": 10,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 137,
+							"name": "deviceModel",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/metadata.d.ts",
+									"line": 11,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 138,
+							"name": "deviceType",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/metadata.d.ts",
+									"line": 12,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 134,
+							"name": "drmType",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/metadata.d.ts",
+									"line": 8,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 130,
+							"name": "live",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/metadata.d.ts",
+									"line": 4,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						},
+						{
+							"id": 135,
+							"name": "userId",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "event/metadata.d.ts",
+									"line": 9,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								132,
+								131,
+								133,
+								136,
+								137,
+								138,
+								134,
+								130,
+								135
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "event/metadata.d.ts",
+							"line": 3,
+							"character": 36
+						}
+					],
+					"indexSignature": {
+						"id": 139,
+						"name": "__index",
+						"kind": 8192,
+						"kindString": "Index signature",
+						"flags": {},
+						"parameters": [
+							{
+								"id": 140,
+								"name": "key",
+								"kind": 32768,
+								"flags": {},
+								"type": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						],
+						"type": {
+							"type": "union",
+							"types": [
+								{
+									"type": "intrinsic",
+									"name": "string"
+								},
+								{
+									"type": "intrinsic",
+									"name": "boolean"
 								}
 							]
 						}
 					}
-				]
+				}
 			}
 		},
 		{
@@ -2112,7 +2165,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -2252,7 +2305,7 @@
 					},
 					{
 						"type": "reference",
-						"id": 137,
+						"id": 141,
 						"name": "TMetadataEvent"
 					}
 				]
@@ -2276,7 +2329,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -2346,7 +2399,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -2416,7 +2469,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -2486,7 +2539,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -2657,7 +2710,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 120,
+						"id": 121,
 						"name": "TBaseEvent"
 					},
 					{
@@ -2912,20 +2965,21 @@
 			"kind": 4194304,
 			"children": [
 				118,
-				120,
+				119,
+				121,
 				55,
 				48,
 				59,
 				62,
 				71,
 				65,
-				119,
+				120,
 				75,
 				78,
 				81,
 				84,
-				137,
-				126,
+				141,
+				128,
 				87,
 				47,
 				90,

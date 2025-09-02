@@ -1,6 +1,7 @@
 type UTCTimestamp = number;
 type UUID = string;
 type Seconds = number;
+type ShardId = string;
 
 export type TEventType =
   | "init"
@@ -24,4 +25,5 @@ export type TBaseEvent = {
   playhead: Seconds;
   duration: Seconds;
   sessionId: UUID;
+  shardId?: ShardId;
 }

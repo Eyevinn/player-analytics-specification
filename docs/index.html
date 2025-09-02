@@ -1,15 +1,195 @@
 <!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@eyevinn/player-analytics-specification</title><meta name="description" content="Documentation for @eyevinn/player-analytics-specification"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@eyevinn/player-analytics-specification</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>@eyevinn/player-analytics-specification</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
-<a href="#eyevinn-player-analytics-specification--epas-" id="eyevinn-player-analytics-specification--epas-" style="color: inherit; text-decoration: none;">
-  <h1>Eyevinn Player Analytics Specification ( EPAS )</h1>
+<a href="#version-02" id="version-02" style="color: inherit; text-decoration: none;">
+  <h1>Version 0.2</h1>
 </a>
-<p>The EPAS is an open specification that defines a standard for implementing analytics in any video/audio player.</p>
-<p>By implementing the specification, a player can send analytics data to an EPAS-compatible backend.</p>
-<p>The specification consists of a JSON schema, typescript definitions, and an event flow.</p>
 
-<a href="#about-eyevinn-technology" id="about-eyevinn-technology" style="color: inherit; text-decoration: none;">
-  <h2>About Eyevinn Technology</h2>
+<a href="#supported-playback-scenarios" id="supported-playback-scenarios" style="color: inherit; text-decoration: none;">
+  <h2>Supported playback scenarios</h2>
 </a>
-<p>Eyevinn Technology is an independent consultant firm specialized in video and streaming. Independent in the sense that we are not commercially tied to any platform or technology vendor.</p>
-<p>At Eyevinn, every software developer consultant has a dedicated budget reserved for open source development and contribution to the open source community. This gives us room for innovation, team building and personal competence development. And also gives us as a company a way to contribute back to the open source community.</p>
-<p>Want to know more about Eyevinn and how it is to work here. Contact us at <a href="mailto:work@eyevinn.se">work@eyevinn.se</a>!</p>
-</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-interface"><a href="interfaces/PlayerAnalyticsClientModule.html" class="tsd-kind-icon">Player<wbr/>Analytics<wbr/>Client<wbr/>Module</a></li><li class="tsd-kind-type-alias"><a href="modules.html#Seconds" class="tsd-kind-icon">Seconds</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TBaseEvent" class="tsd-kind-icon">TBase<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TBitrateChangedEvent" class="tsd-kind-icon">TBitrate<wbr/>Changed<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TBitrateChangedEventPayload" class="tsd-kind-icon">TBitrate<wbr/>Changed<wbr/>Event<wbr/>Payload</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TBufferedEvent" class="tsd-kind-icon">TBuffered<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TBufferingEvent" class="tsd-kind-icon">TBuffering<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TErrorEvent" class="tsd-kind-icon">TError<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TErrorEventPayload" class="tsd-kind-icon">TError<wbr/>Event<wbr/>Payload</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TEventType" class="tsd-kind-icon">TEvent<wbr/>Type</a></li><li class="tsd-kind-type-alias"><a href="modules.html#THeartbeatEvent" class="tsd-kind-icon">THeartbeat<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TInitEvent" class="tsd-kind-icon">TInit<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TLoadedEvent" class="tsd-kind-icon">TLoaded<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TLoadingEvent" class="tsd-kind-icon">TLoading<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TMetadataEvent" class="tsd-kind-icon">TMetadata<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TMetadataEventPayload" class="tsd-kind-icon">TMetadata<wbr/>Event<wbr/>Payload</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TPausedEvent" class="tsd-kind-icon">TPaused<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TPlayerAnalyticsEvent" class="tsd-kind-icon">TPlayer<wbr/>Analytics<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TPlayingEvent" class="tsd-kind-icon">TPlaying<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TSeekedEvent" class="tsd-kind-icon">TSeeked<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TSeekingEvent" class="tsd-kind-icon">TSeeking<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TStoppedEvent" class="tsd-kind-icon">TStopped<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TStoppedEventPayload" class="tsd-kind-icon">TStopped<wbr/>Event<wbr/>Payload</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TWarningEvent" class="tsd-kind-icon">TWarning<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TWarningEventPayload" class="tsd-kind-icon">TWarning<wbr/>Event<wbr/>Payload</a></li><li class="tsd-kind-type-alias"><a href="modules.html#UTCTimestamp" class="tsd-kind-icon">UTCTimestamp</a></li><li class="tsd-kind-type-alias"><a href="modules.html#UUID" class="tsd-kind-icon">UUID</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
+<p>✅ - Fully supported
+⚠️ - Partially supported
+🚫 - Not supported</p>
+<table>
+<thead>
+<tr>
+<th align="left">Scenario</th>
+<th align="left">Support</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">VOD</td>
+<td align="left">✅</td>
+</tr>
+<tr>
+<td align="left">Live Events</td>
+<td align="left">⚠️</td>
+</tr>
+<tr>
+<td align="left">Live channels</td>
+<td align="left">⚠️</td>
+</tr>
+<tr>
+<td align="left">Server-side Ad insertion</td>
+<td align="left">🚫</td>
+</tr>
+<tr>
+<td align="left">Client-side Ad insertion</td>
+<td align="left">🚫</td>
+</tr>
+</tbody></table>
+
+<a href="#terminology" id="terminology" style="color: inherit; text-decoration: none;">
+  <h2>Terminology</h2>
+</a>
+<p><code>session</code> - A session means the viewing session of a piece of content.</p>
+<p><code>sessionId</code> - Refers to the unique identifier for a viewing session of a piece of  content.</p>
+<p><code>event</code> - Refers to a set of data that corresponds to the viewing experience.</p>
+
+<a href="#event-flow" id="event-flow" style="color: inherit; text-decoration: none;">
+  <h2>Event flow</h2>
+</a>
+<p>An analytics specification needs a reliable event flow, it is crucial that the following events are implemented correctly for the backend to be able to churn out session data.</p>
+
+<a href="#json-schema" id="json-schema" style="color: inherit; text-decoration: none;">
+  <h3>JSON Schema</h3>
+</a>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;event_enum&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;UID&quot;</span><span class="hl-0"> </span><br/><span class="hl-0">  </span><span class="hl-1">timestamp:</span><span class="hl-0"> </span><span class="hl-3">1634911668339</span><span class="hl-0">, </span><span class="hl-4">// UTC time. The client SHOULD send valid UTC time.</span><br/><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">, </span><span class="hl-4">// The current playhead position in milliseconds, if the content is Live should be UTC time. -1 if unknown</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">, </span><span class="hl-4">// The duration of the content in milliseconds. VOD = length of stream, Live = live edge in UTC. -1 if unknown </span><br/><span class="hl-0">  </span><span class="hl-1">payload?</span><span class="hl-0">: {</span><br/><span class="hl-0">    </span><span class="hl-4">// Unique to each event</span><br/><span class="hl-0">    </span><span class="hl-4">// If needed additional custom fields may be added here as well but the server MAY ignore them. </span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#flowchart" id="flowchart" style="color: inherit; text-decoration: none;">
+  <h3>Flowchart</h3>
+</a>
+<p><img src="./flowchart/epas_flowchart.png" alt=""></p>
+
+<a href="#events" id="events" style="color: inherit; text-decoration: none;">
+  <h3>Events</h3>
+</a>
+
+<a href="#init" id="init" style="color: inherit; text-decoration: none;">
+  <h4>init</h4>
+</a>
+<p>Sent when the client knows it should start a viewing session of content.</p>
+<p>This SHOULD be the first event sent by the client to the server.</p>
+<p>A restart of content SHOULD create a new session.</p>
+<p>The server SHOULD handle events arriving out of order. Each event carries a <code>sessionId</code> and a <code>timestamp</code> for ordering in post.</p>
+<p>MUST be sent ONCE per session.</p>
+<p>MUST be a unique sessionId.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;init&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">-1</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">-1</span><span class="hl-0">, </span><span class="hl-4">// if the player has an expected startTime, eg. if user continues watching a movie, use that value here.</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">-1</span><span class="hl-0">,</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#metadata" id="metadata" style="color: inherit; text-decoration: none;">
+  <h4>metadata</h4>
+</a>
+<p>Contains non-critical metadata connected to the session.</p>
+<p>Optional event that can be sent at any time. It is recommended to send it in the interval between the <code>init</code> and <code>stop</code> events.</p>
+<p>The server SHOULD merge metadata payloads with previous metadata payloads from the session.</p>
+<p>The server SHOULD handle <code>live</code> toggling from <code>true</code> to <code>false</code> (dynamic to static transitions).</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">payload</span><span class="hl-0">: {</span><br/><span class="hl-0">    </span><span class="hl-1">live?</span><span class="hl-0">: </span><span class="hl-5">false</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-1">contentTitle?</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  },</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#heartbeat" id="heartbeat" style="color: inherit; text-decoration: none;">
+  <h4>heartbeat</h4>
+</a>
+<p>Sent on an interval, if a certain number of heartbeat events are missing the server can close a session without receiving a stopped event. </p>
+<p>MUST be sent at a fixed interval.</p>
+<p>The interval SHOULD be agreed upon between client and server.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;heartbeat&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">payload?</span><span class="hl-0">: {</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#loading" id="loading" style="color: inherit; text-decoration: none;">
+  <h4>loading</h4>
+</a>
+<p>Sent when the contentUrl has been attached to the client player.</p>
+<p>MUST be sent ONCE per session.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;loading&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#loaded" id="loaded" style="color: inherit; text-decoration: none;">
+  <h4>loaded</h4>
+</a>
+<p>Sent when there is enough buffered content for the player to start playing the content.</p>
+<p>MUST be sent ONCE per session.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;loaded&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#playing" id="playing" style="color: inherit; text-decoration: none;">
+  <h4>playing</h4>
+</a>
+<p>Sent when playback starts or resumes, when the playhead starts to move.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;playing&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#paused" id="paused" style="color: inherit; text-decoration: none;">
+  <h4>paused</h4>
+</a>
+<p>Sent when the player is paused due to a pause request. </p>
+<p>Should not be sent when playback stops for other reasons, e.g. buffering or seeking.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;paused&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#buffering" id="buffering" style="color: inherit; text-decoration: none;">
+  <h4>buffering</h4>
+</a>
+<p>Sent when the player starts buffering. Buffering that happens when seeking or loading should be ignored.</p>
+<p>Note, since it is possible to pause and unpause during buffering, the corresponding <code>playing</code> should not trigger until after <code>buffered</code>, since that is when the playhead can start moving again.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;buffering&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#buffered" id="buffered" style="color: inherit; text-decoration: none;">
+  <h4>buffered</h4>
+</a>
+<p>Sent when the player has finished buffering.</p>
+<p>If the buffering is interrupted, for example by <code>seeking</code> or <code>stopped</code>, <code>buffered</code> should NOT be sent.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;buffered&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#seeking" id="seeking" style="color: inherit; text-decoration: none;">
+  <h4>seeking</h4>
+</a>
+<p>Sent when the player starts seeking to a new playhead time. </p>
+<p>The <code>playhead</code> MUST be the current playhead time NOT the target playhead time.</p>
+<p>Note, since it is possible to pause and unpause during seeking, the corresponding <code>playing</code> should not trigger until after <code>seeked</code>, since that is when the playhead can start moving again.</p>
+<p>MUST not be sent during <code>loading</code>.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;seeking&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">, </span><span class="hl-4">// the current playhead</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#seeked" id="seeked" style="color: inherit; text-decoration: none;">
+  <h4>seeked</h4>
+</a>
+<p>Sent when the player has finished seeking to the new playhead time and is ready to start playing.</p>
+<p><code>playhead</code> MUST be the new playhead time.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;seeked&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">, </span><span class="hl-4">// the new playhead</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#bitrate_changed" id="bitrate_changed" style="color: inherit; text-decoration: none;">
+  <h4>bitrate_changed</h4>
+</a>
+<p>Can be sent after loaded event, before the stopped event.</p>
+<p>Sent when the player successfully switches to a new bitrate.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;bitrate_changed&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">payload</span><span class="hl-0">: {</span><br/><span class="hl-0">    </span><span class="hl-1">bitrate</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">, </span><span class="hl-4">// bitrate in Kbps</span><br/><span class="hl-0">    </span><span class="hl-1">width?</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">, </span><span class="hl-4">// video width in pixels</span><br/><span class="hl-0">    </span><span class="hl-1">height?</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">, </span><span class="hl-4">// video height in pixels</span><br/><span class="hl-0">    </span><span class="hl-1">videoBitrate?</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">, </span><span class="hl-4">// if available provide the bitrate for the video track</span><br/><span class="hl-0">    </span><span class="hl-1">audioBitrate?</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">, </span><span class="hl-4">// if available provide the bitrate for the audio track</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#stopped" id="stopped" style="color: inherit; text-decoration: none;">
+  <h4>stopped</h4>
+</a>
+<p>Sent when playback stops.</p>
+<p>Can be sent after init.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;stopped&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-1">string</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">payload</span><span class="hl-0">: {</span><br/><span class="hl-0">    </span><span class="hl-1">reason</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">, </span><span class="hl-4">// eg. &quot;ended&quot;, &quot;aborted&quot;, &quot;error&quot;</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#error" id="error" style="color: inherit; text-decoration: none;">
+  <h4>error</h4>
+</a>
+<p>Sent when a fatal error occurs. </p>
+<p>The following <code>stopped</code> event SHOULD be sent with <code>reason: &quot;error&quot;</code>.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;error&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">payload</span><span class="hl-0">: {</span><br/><span class="hl-0">    </span><span class="hl-1">category?</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">, </span><span class="hl-4">// eg. NETWORK, DECODER, etc.</span><br/><span class="hl-0">    </span><span class="hl-1">code</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-1">message?</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">, </span><br/><span class="hl-0">    </span><span class="hl-1">data?</span><span class="hl-0">: {} </span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#warning" id="warning" style="color: inherit; text-decoration: none;">
+  <h4>warning</h4>
+</a>
+<p>Sent when a non-fatal error occurs. </p>
+<p>A playback error that the player can recover from without interruption.</p>
+<pre><code class="language-jsonc"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-1">event</span><span class="hl-0">: </span><span class="hl-2">&quot;warning&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">sessionId</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">timestamp</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">playhead</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">duration</span><span class="hl-0">: </span><span class="hl-3">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">payload</span><span class="hl-0">: {</span><br/><span class="hl-0">    </span><span class="hl-1">category?</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">, </span><span class="hl-4">// eg. NETWORK, DECODER, osv.</span><br/><span class="hl-0">    </span><span class="hl-1">code</span><span class="hl-0"> </span><span class="hl-6">&quot;&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">    </span><span class="hl-1">message?</span><span class="hl-0">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-1">data?</span><span class="hl-0">: {} </span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span>
+</code></pre>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-interface"><a href="interfaces/PlayerAnalyticsClientModule.html" class="tsd-kind-icon">Player<wbr/>Analytics<wbr/>Client<wbr/>Module</a></li><li class="tsd-kind-type-alias"><a href="modules.html#Seconds" class="tsd-kind-icon">Seconds</a></li><li class="tsd-kind-type-alias"><a href="modules.html#ShardId" class="tsd-kind-icon">Shard<wbr/>Id</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TBaseEvent" class="tsd-kind-icon">TBase<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TBitrateChangedEvent" class="tsd-kind-icon">TBitrate<wbr/>Changed<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TBitrateChangedEventPayload" class="tsd-kind-icon">TBitrate<wbr/>Changed<wbr/>Event<wbr/>Payload</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TBufferedEvent" class="tsd-kind-icon">TBuffered<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TBufferingEvent" class="tsd-kind-icon">TBuffering<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TErrorEvent" class="tsd-kind-icon">TError<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TErrorEventPayload" class="tsd-kind-icon">TError<wbr/>Event<wbr/>Payload</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TEventType" class="tsd-kind-icon">TEvent<wbr/>Type</a></li><li class="tsd-kind-type-alias"><a href="modules.html#THeartbeatEvent" class="tsd-kind-icon">THeartbeat<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TInitEvent" class="tsd-kind-icon">TInit<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TLoadedEvent" class="tsd-kind-icon">TLoaded<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TLoadingEvent" class="tsd-kind-icon">TLoading<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TMetadataEvent" class="tsd-kind-icon">TMetadata<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TMetadataEventPayload" class="tsd-kind-icon">TMetadata<wbr/>Event<wbr/>Payload</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TPausedEvent" class="tsd-kind-icon">TPaused<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TPlayerAnalyticsEvent" class="tsd-kind-icon">TPlayer<wbr/>Analytics<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TPlayingEvent" class="tsd-kind-icon">TPlaying<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TSeekedEvent" class="tsd-kind-icon">TSeeked<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TSeekingEvent" class="tsd-kind-icon">TSeeking<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TStoppedEvent" class="tsd-kind-icon">TStopped<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TStoppedEventPayload" class="tsd-kind-icon">TStopped<wbr/>Event<wbr/>Payload</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TWarningEvent" class="tsd-kind-icon">TWarning<wbr/>Event</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TWarningEventPayload" class="tsd-kind-icon">TWarning<wbr/>Event<wbr/>Payload</a></li><li class="tsd-kind-type-alias"><a href="modules.html#UTCTimestamp" class="tsd-kind-icon">UTCTimestamp</a></li><li class="tsd-kind-type-alias"><a href="modules.html#UUID" class="tsd-kind-icon">UUID</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
