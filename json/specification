@@ -370,7 +370,7 @@
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 141,
+										"id": 143,
 										"name": "TMetadataEvent"
 									}
 								}
@@ -661,6 +661,24 @@
 			]
 		},
 		{
+			"id": 120,
+			"name": "Domain",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "event/base.d.ts",
+					"line": 5,
+					"character": 5
+				}
+			],
+			"type": {
+				"type": "intrinsic",
+				"name": "string"
+			}
+		},
+		{
 			"id": 118,
 			"name": "Seconds",
 			"kind": 4194304,
@@ -697,7 +715,7 @@
 			}
 		},
 		{
-			"id": 121,
+			"id": 122,
 			"name": "TBaseEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -705,22 +723,66 @@
 			"sources": [
 				{
 					"fileName": "event/base.d.ts",
-					"line": 23,
+					"line": 24,
 					"character": 12
 				}
 			],
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 122,
+					"id": 123,
 					"name": "__type",
 					"kind": 65536,
 					"kindString": "Type literal",
 					"flags": {},
 					"children": [
 						{
-							"id": 125,
+							"id": 129,
+							"name": "domain",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "OPTIONAL. Populated by the ingest server, NOT by the client.",
+								"text": "The server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).\n"
+							},
+							"sources": [
+								{
+									"fileName": "event/base.d.ts",
+									"line": 39,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 120,
+								"name": "Domain"
+							}
+						},
+						{
+							"id": 126,
 							"name": "duration",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "event/base.d.ts",
+									"line": 27,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 118,
+								"name": "Seconds"
+							}
+						},
+						{
+							"id": 125,
+							"name": "playhead",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
@@ -738,26 +800,7 @@
 							}
 						},
 						{
-							"id": 124,
-							"name": "playhead",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "event/base.d.ts",
-									"line": 25,
-									"character": 2
-								}
-							],
-							"type": {
-								"type": "reference",
-								"id": 118,
-								"name": "Seconds"
-							}
-						},
-						{
-							"id": 126,
+							"id": 127,
 							"name": "sessionId",
 							"kind": 1024,
 							"kindString": "Property",
@@ -765,7 +808,7 @@
 							"sources": [
 								{
 									"fileName": "event/base.d.ts",
-									"line": 27,
+									"line": 28,
 									"character": 2
 								}
 							],
@@ -776,7 +819,7 @@
 							}
 						},
 						{
-							"id": 127,
+							"id": 128,
 							"name": "shardId",
 							"kind": 1024,
 							"kindString": "Property",
@@ -786,7 +829,7 @@
 							"sources": [
 								{
 									"fileName": "event/base.d.ts",
-									"line": 28,
+									"line": 29,
 									"character": 2
 								}
 							],
@@ -797,7 +840,7 @@
 							}
 						},
 						{
-							"id": 123,
+							"id": 124,
 							"name": "timestamp",
 							"kind": 1024,
 							"kindString": "Property",
@@ -805,7 +848,7 @@
 							"sources": [
 								{
 									"fileName": "event/base.d.ts",
-									"line": 24,
+									"line": 25,
 									"character": 2
 								}
 							],
@@ -821,18 +864,19 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								125,
-								124,
+								129,
 								126,
+								125,
 								127,
-								123
+								128,
+								124
 							]
 						}
 					],
 					"sources": [
 						{
 							"fileName": "event/base.d.ts",
-							"line": 23,
+							"line": 24,
 							"character": 25
 						}
 					]
@@ -857,7 +901,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1091,7 +1135,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1161,7 +1205,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1231,7 +1275,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1437,7 +1481,7 @@
 			}
 		},
 		{
-			"id": 120,
+			"id": 121,
 			"name": "TEventType",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1445,7 +1489,7 @@
 			"sources": [
 				{
 					"fileName": "event/base.d.ts",
-					"line": 6,
+					"line": 7,
 					"character": 12
 				}
 			],
@@ -1533,7 +1577,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1603,7 +1647,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1673,7 +1717,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1743,7 +1787,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -1796,7 +1840,7 @@
 			}
 		},
 		{
-			"id": 141,
+			"id": 143,
 			"name": "TMetadataEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1813,20 +1857,20 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 142,
+							"id": 144,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 143,
+									"id": 145,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1844,7 +1888,7 @@
 									}
 								},
 								{
-									"id": 144,
+									"id": 146,
 									"name": "payload",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1858,7 +1902,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 128,
+										"id": 130,
 										"name": "TMetadataEventPayload"
 									}
 								}
@@ -1868,8 +1912,8 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										143,
-										144
+										145,
+										146
 									]
 								}
 							],
@@ -1886,7 +1930,7 @@
 			}
 		},
 		{
-			"id": 128,
+			"id": 130,
 			"name": "TMetadataEventPayload",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1901,14 +1945,14 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 129,
+					"id": 131,
 					"name": "__type",
 					"kind": 65536,
 					"kindString": "Type literal",
 					"flags": {},
 					"children": [
 						{
-							"id": 132,
+							"id": 134,
 							"name": "contentId",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1928,7 +1972,7 @@
 							}
 						},
 						{
-							"id": 131,
+							"id": 133,
 							"name": "contentTitle",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1948,7 +1992,7 @@
 							}
 						},
 						{
-							"id": 133,
+							"id": 135,
 							"name": "contentUrl",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1968,7 +2012,7 @@
 							}
 						},
 						{
-							"id": 136,
+							"id": 138,
 							"name": "deviceId",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1988,7 +2032,7 @@
 							}
 						},
 						{
-							"id": 137,
+							"id": 139,
 							"name": "deviceModel",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2008,7 +2052,7 @@
 							}
 						},
 						{
-							"id": 138,
+							"id": 140,
 							"name": "deviceType",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2028,7 +2072,7 @@
 							}
 						},
 						{
-							"id": 134,
+							"id": 136,
 							"name": "drmType",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2048,7 +2092,7 @@
 							}
 						},
 						{
-							"id": 130,
+							"id": 132,
 							"name": "live",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2068,7 +2112,7 @@
 							}
 						},
 						{
-							"id": 135,
+							"id": 137,
 							"name": "userId",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2093,15 +2137,15 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								132,
-								131,
-								133,
-								136,
-								137,
-								138,
 								134,
-								130,
-								135
+								133,
+								135,
+								138,
+								139,
+								140,
+								136,
+								132,
+								137
 							]
 						}
 					],
@@ -2113,14 +2157,14 @@
 						}
 					],
 					"indexSignature": {
-						"id": 139,
+						"id": 141,
 						"name": "__index",
 						"kind": 8192,
 						"kindString": "Index signature",
 						"flags": {},
 						"parameters": [
 							{
-								"id": 140,
+								"id": 142,
 								"name": "key",
 								"kind": 32768,
 								"flags": {},
@@ -2165,7 +2209,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -2305,7 +2349,7 @@
 					},
 					{
 						"type": "reference",
-						"id": 141,
+						"id": 143,
 						"name": "TMetadataEvent"
 					}
 				]
@@ -2329,7 +2373,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -2399,7 +2443,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -2469,7 +2513,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -2539,7 +2583,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -2710,7 +2754,7 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 121,
+						"id": 122,
 						"name": "TBaseEvent"
 					},
 					{
@@ -2964,22 +3008,23 @@
 			"title": "Type aliases",
 			"kind": 4194304,
 			"children": [
+				120,
 				118,
 				119,
-				121,
+				122,
 				55,
 				48,
 				59,
 				62,
 				71,
 				65,
-				120,
+				121,
 				75,
 				78,
 				81,
 				84,
-				141,
-				128,
+				143,
+				130,
 				87,
 				47,
 				90,
