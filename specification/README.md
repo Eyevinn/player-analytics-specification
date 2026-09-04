@@ -43,6 +43,23 @@ An analytics specification needs a reliable event flow, it is crucial that the f
 }
 ```
 
+### Server-populated fields
+
+Some fields are NOT sent by the client. They are OPTIONAL and populated by the ingest server after it receives an event. Clients MUST NOT set them, and consumers MUST treat them as absent unless present.
+
+`domain` - OPTIONAL string. The ingest server SHOULD derive this from the request's HTTP `Origin` header — the scheme, host, and optional port of the page that produced the event (e.g. `"https://example.com"`). It is server-derived and MUST NOT be trusted as a client-supplied value. When the `Origin` header is absent from the request, the server omits the field entirely (it is never set to an empty string or a placeholder). Because it is optional, it never appears in any event's required set, so events remain valid whether or not it is present.
+
+```jsonc
+{
+  event: "event_enum",
+  sessionId: "UID",
+  timestamp: 1634911668339,
+  playhead: 0,
+  duration: 0,
+  domain?: "https://example.com", // server-populated from the HTTP Origin header; omitted when the header is absent
+}
+```
+
 ### Flowchart
 
 ![](./flowchart/epas_flowchart.png)

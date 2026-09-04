@@ -93,6 +93,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -152,6 +156,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -186,6 +194,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -220,6 +232,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -276,6 +292,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -310,6 +330,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -344,6 +368,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -378,6 +406,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -412,6 +444,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -446,6 +482,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -480,6 +520,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -514,6 +558,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -548,6 +596,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -595,6 +647,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
@@ -651,6 +707,10 @@
                 {
                     "additionalProperties": false,
                     "properties": {
+                        "domain": {
+                            "description": "OPTIONAL. Populated by the ingest server, NOT by the client.\n\nThe server SHOULD derive this from the request's HTTP `Origin` header\n(the scheme + host + optional port of the page that produced the event,\ne.g. \"https://example.com\"). It MUST NOT be trusted as a client-supplied\nvalue. When the `Origin` header is absent, the field is omitted entirely\n(it is never set to an empty string or a placeholder).",
+                            "type": "string"
+                        },
                         "duration": {
                             "type": "number"
                         },
