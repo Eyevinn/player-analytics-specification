@@ -198,7 +198,9 @@ Note, since it is possible to pause and unpause during buffering, the correspond
 
 Sent when the player has finished buffering.
 
-If the buffering is interrupted, for example by `seeking` or `stopped`, `buffered` should NOT be sent.
+If the buffering is interrupted by `seeking`, `buffered` SHOULD still be sent (before the `seeking` event) to close the buffering period.
+
+If the buffering is interrupted by `stopped`, `buffered` should NOT be sent.
 
 ```jsonc
 {
