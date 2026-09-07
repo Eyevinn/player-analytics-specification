@@ -113,6 +113,27 @@ The server SHOULD handle `live` toggling from `true` to `false` (dynamic to stat
 }
 ```
 
+##### Grouping custom metadata with `customMetadataId`
+
+`customMetadataId` - OPTIONAL number. A client-defined grouping key that a client can set in the `metadata` payload to label its own custom metadata event types. It lets a client distinguish between several kinds of metadata events it emits (for example, one grouping key for one category of custom metadata and another for a different category), without the specification prescribing what those categories mean.
+
+The value is opaque to the server: the client assigns it however it likes, and the server MUST NOT interpret or validate it. It is carried through the ingest server unchanged so that downstream consumers can filter by it. Being optional, it is fully back-compatible — omitting it leaves existing behaviour unchanged, and it never appears in the metadata event's required set.
+
+The specification defines only the field and its meaning at the event level. How the id is physically persisted (the storage column, index, or query shape used to filter by it) is owned by the downstream worker/storage layer, not by the specification or the ingest server.
+
+```jsonc
+{
+  sessionId: "",
+  timestamp: 0,
+  playhead: 0,
+  duration: 0,
+  payload: {
+    contentTitle?: "",
+    customMetadataId?: 1, // client-defined grouping key for the client's own custom metadata event types; opaque to the server
+  },
+}
+```
+
 #### heartbeat
 
 Sent on an interval, if a certain number of heartbeat events are missing the server can close a session without receiving a stopped event. 
