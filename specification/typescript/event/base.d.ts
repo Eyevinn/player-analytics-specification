@@ -6,12 +6,12 @@ type Domain = string;
 
 export type TEventType =
   | "init"
+  | "metadata"
   | "heartbeat"
   | "loading"
   | "loaded"
   | "playing"
   | "paused"
-  | "resume"
   | "buffering"
   | "buffered"
   | "seeking"
