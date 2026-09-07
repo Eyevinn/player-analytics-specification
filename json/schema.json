@@ -724,6 +724,7 @@
                             "additionalProperties": {
                                 "type": [
                                     "string",
+                                    "number",
                                     "boolean"
                                 ]
                             },
@@ -736,6 +737,10 @@
                                 },
                                 "contentUrl": {
                                     "type": "string"
+                                },
+                                "customMetadataId": {
+                                    "description": "OPTIONAL. A client-defined grouping key for related metadata events.\n\nOpaque to the server: the client assigns it however it likes and the\nserver MUST NOT interpret or validate its value. Being optional, it is\nfully back-compatible — omitting it leaves existing behaviour unchanged.",
+                                    "type": "number"
                                 },
                                 "deviceId": {
                                     "type": "string"
