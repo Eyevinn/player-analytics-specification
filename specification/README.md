@@ -134,6 +134,30 @@ The specification defines only the field and its meaning at the event level. How
 }
 ```
 
+##### Server-populated geo fields (`country` and `city`)
+
+The `metadata` event carries two OPTIONAL server-populated fields alongside its `payload`. Like `domain`, they are NOT sent by the client — the ingest server derives them after receiving the event (typically via a geo lookup of the caller's address) and the SDKs never set them.
+
+`country` - OPTIONAL string. An ISO 3166-1 alpha-2 country code (e.g. `"SE"`). It is server-derived and MUST NOT be trusted as a client-supplied value. When the server cannot determine the country, it omits the field entirely (it is never set to an empty string or a placeholder).
+
+`city` - OPTIONAL string. The city name derived for the request. It is server-derived and MUST NOT be trusted as a client-supplied value. When the server cannot determine the city, it omits the field entirely (it is never set to an empty string or a placeholder).
+
+Both fields sit at the top level of the `metadata` event (not inside `payload`), mirroring `domain`. Because they are optional, they never appear in the event's required set, so events remain valid whether or not they are present.
+
+```jsonc
+{
+  sessionId: "",
+  timestamp: 0,
+  playhead: 0,
+  duration: 0,
+  payload: {
+    contentTitle?: "",
+  },
+  country?: "SE",      // server-populated ISO 3166-1 alpha-2 country code; omitted when unknown
+  city?: "Stockholm",  // server-populated city name; omitted when unknown
+}
+```
+
 #### heartbeat
 
 Sent on an interval, if a certain number of heartbeat events are missing the server can close a session without receiving a stopped event. 

@@ -370,7 +370,7 @@
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 143,
+										"id": 144,
 										"name": "TMetadataEvent"
 									}
 								}
@@ -1502,6 +1502,10 @@
 					},
 					{
 						"type": "literal",
+						"value": "metadata"
+					},
+					{
+						"type": "literal",
 						"value": "heartbeat"
 					},
 					{
@@ -1519,10 +1523,6 @@
 					{
 						"type": "literal",
 						"value": "paused"
-					},
-					{
-						"type": "literal",
-						"value": "resume"
 					},
 					{
 						"type": "literal",
@@ -1840,7 +1840,7 @@
 			}
 		},
 		{
-			"id": 143,
+			"id": 144,
 			"name": "TMetadataEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1848,7 +1848,7 @@
 			"sources": [
 				{
 					"fileName": "event/metadata.d.ts",
-					"line": 16,
+					"line": 24,
 					"character": 12
 				}
 			],
@@ -1863,14 +1863,62 @@
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 144,
+							"id": 145,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 145,
+									"id": 149,
+									"name": "city",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"shortText": "OPTIONAL. Populated by the ingest server, NOT by the client.",
+										"text": "City name that the server MAY derive from the request — typically via a\ngeo lookup of the caller's address. It is server-derived and MUST NOT be\ntrusted as a client-supplied value; the SDKs do not send it. When the\nserver cannot determine the city, the field is omitted entirely (it is\nnever set to an empty string or a placeholder). Being optional, it is\nfully back-compatible — omitting it leaves existing payloads valid.\n"
+									},
+									"sources": [
+										{
+											"fileName": "event/metadata.d.ts",
+											"line": 49,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 148,
+									"name": "country",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"shortText": "OPTIONAL. Populated by the ingest server, NOT by the client.",
+										"text": "ISO 3166-1 alpha-2 country code (e.g. \"SE\") that the server MAY derive\nfrom the request — typically via a geo lookup of the caller's address.\nIt is server-derived and MUST NOT be trusted as a client-supplied value;\nthe SDKs do not send it. When the server cannot determine the country,\nthe field is omitted entirely (it is never set to an empty string or a\nplaceholder). Being optional, it is fully back-compatible — omitting it\nleaves existing payloads valid.\n"
+									},
+									"sources": [
+										{
+											"fileName": "event/metadata.d.ts",
+											"line": 38,
+											"character": 2
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 146,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1878,7 +1926,7 @@
 									"sources": [
 										{
 											"fileName": "event/metadata.d.ts",
-											"line": 17,
+											"line": 25,
 											"character": 2
 										}
 									],
@@ -1888,7 +1936,7 @@
 									}
 								},
 								{
-									"id": 146,
+									"id": 147,
 									"name": "payload",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1896,7 +1944,7 @@
 									"sources": [
 										{
 											"fileName": "event/metadata.d.ts",
-											"line": 18,
+											"line": 26,
 											"character": 2
 										}
 									],
@@ -1912,15 +1960,17 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										145,
-										146
+										149,
+										148,
+										146,
+										147
 									]
 								}
 							],
 							"sources": [
 								{
 									"fileName": "event/metadata.d.ts",
-									"line": 16,
+									"line": 24,
 									"character": 42
 								}
 							]
@@ -2009,6 +2059,30 @@
 							"type": {
 								"type": "intrinsic",
 								"name": "string"
+							}
+						},
+						{
+							"id": 141,
+							"name": "customMetadataId",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "OPTIONAL. A client-defined grouping key for related metadata events.",
+								"text": "Opaque to the server: the client assigns it however it likes and the\nserver MUST NOT interpret or validate its value. Being optional, it is\nfully back-compatible — omitting it leaves existing behaviour unchanged.\n"
+							},
+							"sources": [
+								{
+									"fileName": "event/metadata.d.ts",
+									"line": 20,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
 							}
 						},
 						{
@@ -2140,6 +2214,7 @@
 								134,
 								133,
 								135,
+								141,
 								138,
 								139,
 								140,
@@ -2157,14 +2232,14 @@
 						}
 					],
 					"indexSignature": {
-						"id": 141,
+						"id": 142,
 						"name": "__index",
 						"kind": 8192,
 						"kindString": "Index signature",
 						"flags": {},
 						"parameters": [
 							{
-								"id": 142,
+								"id": 143,
 								"name": "key",
 								"kind": 32768,
 								"flags": {},
@@ -2180,6 +2255,10 @@
 								{
 									"type": "intrinsic",
 									"name": "string"
+								},
+								{
+									"type": "intrinsic",
+									"name": "number"
 								},
 								{
 									"type": "intrinsic",
@@ -2349,7 +2428,7 @@
 					},
 					{
 						"type": "reference",
-						"id": 143,
+						"id": 144,
 						"name": "TMetadataEvent"
 					}
 				]
@@ -3023,7 +3102,7 @@
 				78,
 				81,
 				84,
-				143,
+				144,
 				130,
 				87,
 				47,
