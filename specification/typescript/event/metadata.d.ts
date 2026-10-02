@@ -24,4 +24,27 @@ export type TMetadataEventPayload = {
 export type TMetadataEvent = TBaseEvent & {
   event: "metadata";
   payload: TMetadataEventPayload;
+  /**
+   * OPTIONAL. Populated by the ingest server, NOT by the client.
+   *
+   * ISO 3166-1 alpha-2 country code (e.g. "SE") that the server MAY derive
+   * from the request — typically via a geo lookup of the caller's address.
+   * It is server-derived and MUST NOT be trusted as a client-supplied value;
+   * the SDKs do not send it. When the server cannot determine the country,
+   * the field is omitted entirely (it is never set to an empty string or a
+   * placeholder). Being optional, it is fully back-compatible — omitting it
+   * leaves existing payloads valid.
+   */
+  country?: string;
+  /**
+   * OPTIONAL. Populated by the ingest server, NOT by the client.
+   *
+   * City name that the server MAY derive from the request — typically via a
+   * geo lookup of the caller's address. It is server-derived and MUST NOT be
+   * trusted as a client-supplied value; the SDKs do not send it. When the
+   * server cannot determine the city, the field is omitted entirely (it is
+   * never set to an empty string or a placeholder). Being optional, it is
+   * fully back-compatible — omitting it leaves existing payloads valid.
+   */
+  city?: string;
 }
