@@ -22,6 +22,9 @@
 
 See the [Specification README](specification/README.md).
 
+For reference definitions of the QoE metrics computed from the events (view, startup time,
+rebuffer, and more), with runnable ClickHouse queries, see [QoE Metrics](specification/metrics.md).
+
 The specification consists of typescript definitions, a generated JSON schema, documentation, and an event flow.
 
 The specification is strictly for tracking playback quality using a concise set of events, that must follow a predictable sequence.
