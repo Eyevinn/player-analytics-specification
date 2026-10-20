@@ -34,8 +34,8 @@ An analytics specification needs a reliable event flow, it is crucial that the f
   sessionId: "UID" 
   timestamp: 1634911668339, // UTC time. The client SHOULD send valid UTC time.
 
-  playhead: 0, // The current playhead position in milliseconds, if the content is Live should be UTC time. -1 if unknown
-  duration: 0, // The duration of the content in milliseconds. VOD = length of stream, Live = live edge in UTC. -1 if unknown 
+  playhead: 0, // The current playhead position as an integer number of milliseconds, if the content is Live should be UTC time. -1 if unknown
+  duration: 0, // The duration of the content as an integer number of milliseconds. VOD = length of stream, Live = live edge in UTC. -1 if unknown 
   payload?: {
     // Unique to each event
     // If needed additional custom fields may be added here as well but the server MAY ignore them. 

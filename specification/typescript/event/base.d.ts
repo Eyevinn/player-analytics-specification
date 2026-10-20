@@ -1,6 +1,6 @@
 type UTCTimestamp = number;
 type UUID = string;
-type Seconds = number;
+type Milliseconds = number;
 type ShardId = string;
 type Domain = string;
 
@@ -23,8 +23,16 @@ export type TEventType =
 
 export type TBaseEvent = {
   timestamp: UTCTimestamp;
-  playhead: Seconds;
-  duration: Seconds;
+  /**
+   * The current playhead position as an integer number of milliseconds. If the
+   * content is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.
+   */
+  playhead: Milliseconds;
+  /**
+   * The duration of the content as an integer number of milliseconds. VOD =
+   * length of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.
+   */
+  duration: Milliseconds;
   sessionId: UUID;
   shardId?: ShardId;
   /**
