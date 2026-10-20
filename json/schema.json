@@ -98,6 +98,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -131,6 +132,7 @@
                             "type": "object"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -161,6 +163,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -170,6 +173,7 @@
                             "type": "string"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -199,6 +203,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -208,6 +213,7 @@
                             "type": "string"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -237,6 +243,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -267,6 +274,7 @@
                             "type": "object"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -297,6 +305,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -306,6 +315,7 @@
                             "type": "string"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -335,6 +345,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -344,6 +355,7 @@
                             "type": "string"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -373,6 +385,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -382,6 +395,7 @@
                             "type": "string"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -411,6 +425,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -420,6 +435,7 @@
                             "type": "string"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -449,6 +465,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -458,6 +475,7 @@
                             "type": "string"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -487,6 +505,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -496,6 +515,7 @@
                             "type": "string"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -525,6 +545,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -534,6 +555,7 @@
                             "type": "string"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -563,6 +585,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -572,6 +595,7 @@
                             "type": "string"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -601,6 +625,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -622,6 +647,7 @@
                             "type": "object"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -652,6 +678,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -682,6 +709,7 @@
                             "type": "object"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
@@ -720,6 +748,7 @@
                             "type": "string"
                         },
                         "duration": {
+                            "description": "The duration of the content as an integer number of milliseconds. VOD =\nlength of stream; Live = live edge in UTC (milliseconds). `-1` if unknown.",
                             "type": "number"
                         },
                         "event": {
@@ -772,6 +801,7 @@
                             "type": "object"
                         },
                         "playhead": {
+                            "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
                         "sessionId": {
