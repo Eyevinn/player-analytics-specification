@@ -12,29 +12,35 @@ are derived from those events; they are reference definitions, not part of the e
 
 The queries target the stored table written by the worker through
 [`player-analytics-shared`](https://github.com/Eyevinn/player-analytics-shared)'s
-`ClickHouseDBAdapter` (v0.10.1). The table is named `epas_<shardId>` (one table per shard) and
-has these columns:
+`ClickHouseDBAdapter` (`adapters/db/ClickHouseDBAdapter.ts`, v0.10.2). The table is named
+`epas_<shardId>` (one table per shard) and has these columns:
 
-| Column | Notes |
-|--------|-------|
-| `event` | The event name, e.g. `init`, `loading`, `loaded`, `playing`, `buffering`, `buffered`, `stopped`, `error`, `heartbeat`. See the [event list](README.md#events). |
-| `sessionId` | Unique id of a viewing session. |
-| `timestamp` | UTC time of the event, in **milliseconds** since the Unix epoch (the `timestamp` field of every event). |
-| `playhead` | Playhead position of the event. |
-| `duration` | Content duration reported with the event. |
-| `live` | Whether the session is live (derived from `metadata`). |
-| `contentId` | Content identifier (derived). |
-| `userId` | User identifier (derived). |
-| `deviceId` | Device identifier (derived). |
-| `deviceModel` | Device model (derived). |
-| `deviceType` | Device type (derived). |
-| `payload` | The event `payload`, stored as a **JSON string**. Read fields with ClickHouse `JSONExtract*` functions, e.g. `JSONExtractString(payload, 'reason')`. |
-| `event_date` | Partition helper derived from `timestamp`. |
-| `event_hour` | Partition helper derived from `timestamp`. |
+| Column | Type | Notes |
+|--------|------|-------|
+| `event` | `String` | The event name, e.g. `init`, `loading`, `loaded`, `playing`, `buffering`, `buffered`, `stopped`, `error`, `heartbeat`. See the [event list](README.md#events). |
+| `sessionId` | `String` | Unique id of a viewing session. |
+| `timestamp` | `DateTime64(3)` | UTC time of the event with millisecond precision. Events carry it as epoch milliseconds on the wire; the adapter stores it as a `DateTime64(3)` value, not as an integer. |
+| `playhead` | `Float64` | Playhead position of the event; `-1` when the event has none. |
+| `duration` | `Float64` | Content duration reported with the event; `-1` when the event has none. |
+| `live` | `Bool` | Whether the session is live. Read from the event `payload` (`payload.live`), `false` when absent. |
+| `contentId` | `String` | Read from `payload.contentId`, `''` when absent. |
+| `userId` | `String` | Read from `payload.userId`, `''` when absent. |
+| `deviceId` | `String` | Read from `payload.deviceId`, `''` when absent. |
+| `deviceModel` | `String` | Read from `payload.deviceModel`, `''` when absent. |
+| `deviceType` | `String` | Read from `payload.deviceType`, `''` when absent. |
+| `payload` | `String` | The event `payload`, stored as a **JSON string**. Read fields with ClickHouse `JSONExtract*` functions, e.g. `JSONExtractString(payload, 'reason')`. |
+| `event_date` | `Date` | Partition helper, `toDate(timestamp)`. |
+| `event_hour` | `DateTime` | Partition helper, `toStartOfHour(timestamp)`. |
+
+The adapter's `main` branch also adds `country`, `city` and `domain` (`String`, default `''`,
+written by eventsink 0.6.0 and later). They are not in v0.10.2 and none of the queries below uses
+them.
 
 Replace `epas_<shardId>` with the concrete table name for your shard before running a query. All
-queries are ClickHouse SQL. `timestamp` is treated as epoch milliseconds throughout, so all
-durations below are in milliseconds unless stated otherwise.
+queries are ClickHouse SQL. Because `timestamp` is a `DateTime64(3)`, durations are computed with
+`dateDiff('millisecond', start, end)` and time windows with `now64(3)`; subtracting two timestamps
+or comparing one with an integer does not give milliseconds (ClickHouse rejects the first and
+reads an integer as seconds in the second). All durations below are in milliseconds.
 
 A **view** is the fundamental unit for most metrics and is defined first; the other metrics are
 expressed relative to it.
@@ -58,16 +64,20 @@ WHERE event = 'init';
 `stopped` yet" (some SDKs never send a valid `stopped`, so those sessions would appear to run
 forever), it is defined by a time window tied to the heartbeat cadence: a view is in progress if
 its most recent event is within **2× the largest heartbeat interval** of now. The heartbeat
-interval is measured as the largest gap observed between consecutive `heartbeat` events; doubling
-it tolerates a single missed heartbeat before a session is considered to have ended.
+interval is measured as the largest gap observed between consecutive `heartbeat` events of the
+same session; doubling it tolerates a single missed heartbeat before a session is considered to
+have ended.
 
 ```sql
 WITH
     hb_gaps AS (
         SELECT
-            timestamp - lagInFrame(timestamp) OVER (
+            -- the first heartbeat of a session has no predecessor: defaulting to its own
+            -- timestamp gives gap 0, which the window below ignores
+            dateDiff('millisecond', lagInFrame(timestamp, 1, timestamp) OVER (
                 PARTITION BY sessionId ORDER BY timestamp
-            ) AS gap
+                ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+            ), timestamp) AS gap
         FROM epas_<shardId>
         WHERE event = 'heartbeat'
     ),
@@ -88,18 +98,23 @@ SELECT
 FROM epas_<shardId>
 WHERE sessionId IN (SELECT sessionId FROM views)
 GROUP BY sessionId
-HAVING toUnixTimestamp64Milli(now64(3)) - last_event_ts <= (SELECT w FROM window_ms);
+HAVING dateDiff('millisecond', last_event_ts, now64(3)) <= (SELECT w FROM window_ms);
 ```
 
 > Note: if the dataset contains no `heartbeat` events, `window_ms.w` is empty and no session is
 > reported as in progress. Substitute a fixed window (e.g. the agreed heartbeat interval) if your
 > deployment does not emit heartbeats.
+>
+> The largest observed gap is sensitive to outliers: one long network drop inside a session
+> widens the window for every session. Heartbeats are sent at an agreed interval, so where that
+> interval is known, `2 * <agreed interval in ms>` is the more robust window. A high quantile of
+> the gaps (e.g. `quantileExact(0.99)(gap)`) is a middle ground when it is not.
 
 ## 3. Startup time
 
 **Definition.** The time from the player attaching the content (`loading`) to it being ready to
 play (`loaded`), per session. Both events are sent once per session. Startup time is the
-difference `loaded.timestamp - loading.timestamp`. Reported as the median (p50) and 95th
+difference between the `loaded` and `loading` timestamps, in milliseconds. Reported as the median (p50) and 95th
 percentile (p95) across all sessions that have both events.
 
 ```sql
@@ -110,11 +125,14 @@ WITH per_session AS (
         minIf(timestamp, event = 'loaded')  AS t_loaded
     FROM epas_<shardId>
     GROUP BY sessionId
-    HAVING t_loading > 0 AND t_loaded > 0 AND t_loaded >= t_loading
+    -- minIf returns the epoch when an event is missing, so require both events explicitly
+    HAVING countIf(event = 'loading') > 0
+       AND countIf(event = 'loaded') > 0
+       AND t_loaded >= t_loading
 )
 SELECT
-    quantileExact(0.50)(t_loaded - t_loading) AS startup_p50_ms,
-    quantileExact(0.95)(t_loaded - t_loading) AS startup_p95_ms
+    quantileExact(0.50)(dateDiff('millisecond', t_loading, t_loaded)) AS startup_p50_ms,
+    quantileExact(0.95)(dateDiff('millisecond', t_loading, t_loaded)) AS startup_p95_ms
 FROM per_session;
 ```
 
@@ -122,14 +140,17 @@ FROM per_session;
 
 **Definition.** A rebuffer is an involuntary stall during playback: a `buffering` event that
 occurs **after the session's first `playing`** event. Buffering that happens before the first
-`playing` is part of initial startup, not a rebuffer, and is excluded. Buffering caused by
-seeking or loading is already excluded at the client per the event spec.
+`playing` is part of initial startup, not a rebuffer, and is excluded. The event spec says
+clients should not send `buffering` for seeking or loading; the query relies on that, so a
+client that does (see [Known SDK deviations](#known-sdk-deviations)) inflates this metric.
 
 **Pairing rule for repeated `buffering` events.** A single stall can surface as several
 `buffering` events before the matching `buffered`. To avoid over-counting, a `buffering` event
 starts a new rebuffer only when the preceding buffering-state event for that session was a
 `buffered` (or there was none). In other words, consecutive `buffering` events with no `buffered`
 between them collapse into one rebuffer; the rebuffer is considered closed by the next `buffered`.
+A `buffering` with no later `buffered` (the session ended mid-stall) still counts as one rebuffer,
+and a `buffered` with no preceding `buffering` is ignored.
 
 Reported as the percentage of views that had at least one rebuffer, and the mean number of
 rebuffers per view.
