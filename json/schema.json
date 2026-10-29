@@ -135,6 +135,23 @@
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
+                        },
                         "sessionId": {
                             "type": "string"
                         },
@@ -176,6 +193,23 @@
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
+                        },
                         "sessionId": {
                             "type": "string"
                         },
@@ -215,6 +249,23 @@
                         "playhead": {
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
+                        },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
                         },
                         "sessionId": {
                             "type": "string"
@@ -277,6 +328,23 @@
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
+                        },
                         "sessionId": {
                             "type": "string"
                         },
@@ -318,6 +386,23 @@
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
+                        },
                         "sessionId": {
                             "type": "string"
                         },
@@ -357,6 +442,23 @@
                         "playhead": {
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
+                        },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
                         },
                         "sessionId": {
                             "type": "string"
@@ -398,6 +500,23 @@
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
+                        },
                         "sessionId": {
                             "type": "string"
                         },
@@ -437,6 +556,23 @@
                         "playhead": {
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
+                        },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
                         },
                         "sessionId": {
                             "type": "string"
@@ -478,6 +614,23 @@
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
+                        },
                         "sessionId": {
                             "type": "string"
                         },
@@ -517,6 +670,23 @@
                         "playhead": {
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
+                        },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
                         },
                         "sessionId": {
                             "type": "string"
@@ -558,6 +728,23 @@
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
                         },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
+                        },
                         "sessionId": {
                             "type": "string"
                         },
@@ -597,6 +784,23 @@
                         "playhead": {
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
+                        },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
                         },
                         "sessionId": {
                             "type": "string"
@@ -649,6 +853,23 @@
                         "playhead": {
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
+                        },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
                         },
                         "sessionId": {
                             "type": "string"
@@ -711,6 +932,23 @@
                         "playhead": {
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
+                        },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
                         },
                         "sessionId": {
                             "type": "string"
@@ -803,6 +1041,23 @@
                         "playhead": {
                             "description": "The current playhead position as an integer number of milliseconds. If the\ncontent is Live this SHOULD be the UTC time in milliseconds. `-1` if unknown.",
                             "type": "number"
+                        },
+                        "sdk": {
+                            "additionalProperties": false,
+                            "description": "OPTIONAL. Identifies the client SDK that produced the event.\n\nA client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "version"
+                            ],
+                            "type": "object"
                         },
                         "sessionId": {
                             "type": "string"

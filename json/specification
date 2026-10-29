@@ -370,7 +370,7 @@
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 144,
+										"id": 148,
 										"name": "TMetadataEvent"
 									}
 								}
@@ -737,7 +737,7 @@
 					"flags": {},
 					"children": [
 						{
-							"id": 129,
+							"id": 133,
 							"name": "domain",
 							"kind": 1024,
 							"kindString": "Property",
@@ -751,7 +751,7 @@
 							"sources": [
 								{
 									"fileName": "event/base.d.ts",
-									"line": 47,
+									"line": 60,
 									"character": 2
 								}
 							],
@@ -803,6 +803,91 @@
 								"type": "reference",
 								"id": 118,
 								"name": "Milliseconds"
+							}
+						},
+						{
+							"id": 129,
+							"name": "sdk",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "OPTIONAL. Identifies the client SDK that produced the event.",
+								"text": "A client that sends `sdk` declares that it emits `playhead` and `duration`\nas integer milliseconds, so the server trusts those values and does not\nconvert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,\nand `android`. Both `name` and `version` are required and no other keys\nare allowed.\n"
+							},
+							"sources": [
+								{
+									"fileName": "event/base.d.ts",
+									"line": 47,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 130,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 131,
+											"name": "name",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "event/base.d.ts",
+													"line": 48,
+													"character": 4
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 132,
+											"name": "version",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "event/base.d.ts",
+													"line": 49,
+													"character": 4
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												131,
+												132
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "event/base.d.ts",
+											"line": 47,
+											"character": 8
+										}
+									]
+								}
 							}
 						},
 						{
@@ -870,9 +955,10 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								129,
+								133,
 								126,
 								125,
+								129,
 								127,
 								128,
 								124
@@ -1846,7 +1932,7 @@
 			}
 		},
 		{
-			"id": 144,
+			"id": 148,
 			"name": "TMetadataEvent",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -1869,14 +1955,14 @@
 					{
 						"type": "reflection",
 						"declaration": {
-							"id": 145,
+							"id": 149,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 149,
+									"id": 153,
 									"name": "city",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1900,7 +1986,7 @@
 									}
 								},
 								{
-									"id": 148,
+									"id": 152,
 									"name": "country",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1924,7 +2010,7 @@
 									}
 								},
 								{
-									"id": 146,
+									"id": 150,
 									"name": "event",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1942,7 +2028,7 @@
 									}
 								},
 								{
-									"id": 147,
+									"id": 151,
 									"name": "payload",
 									"kind": 1024,
 									"kindString": "Property",
@@ -1956,7 +2042,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 130,
+										"id": 134,
 										"name": "TMetadataEventPayload"
 									}
 								}
@@ -1966,10 +2052,10 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										149,
-										148,
-										146,
-										147
+										153,
+										152,
+										150,
+										151
 									]
 								}
 							],
@@ -1986,7 +2072,7 @@
 			}
 		},
 		{
-			"id": 130,
+			"id": 134,
 			"name": "TMetadataEventPayload",
 			"kind": 4194304,
 			"kindString": "Type alias",
@@ -2001,14 +2087,14 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 131,
+					"id": 135,
 					"name": "__type",
 					"kind": 65536,
 					"kindString": "Type literal",
 					"flags": {},
 					"children": [
 						{
-							"id": 134,
+							"id": 138,
 							"name": "contentId",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2028,7 +2114,7 @@
 							}
 						},
 						{
-							"id": 133,
+							"id": 137,
 							"name": "contentTitle",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2048,7 +2134,7 @@
 							}
 						},
 						{
-							"id": 135,
+							"id": 139,
 							"name": "contentUrl",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2068,7 +2154,7 @@
 							}
 						},
 						{
-							"id": 141,
+							"id": 145,
 							"name": "customMetadataId",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2092,7 +2178,7 @@
 							}
 						},
 						{
-							"id": 138,
+							"id": 142,
 							"name": "deviceId",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2112,7 +2198,7 @@
 							}
 						},
 						{
-							"id": 139,
+							"id": 143,
 							"name": "deviceModel",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2132,7 +2218,7 @@
 							}
 						},
 						{
-							"id": 140,
+							"id": 144,
 							"name": "deviceType",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2152,7 +2238,7 @@
 							}
 						},
 						{
-							"id": 136,
+							"id": 140,
 							"name": "drmType",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2172,7 +2258,7 @@
 							}
 						},
 						{
-							"id": 132,
+							"id": 136,
 							"name": "live",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2192,7 +2278,7 @@
 							}
 						},
 						{
-							"id": 137,
+							"id": 141,
 							"name": "userId",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2217,16 +2303,16 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								134,
-								133,
-								135,
-								141,
 								138,
+								137,
 								139,
+								145,
+								142,
+								143,
+								144,
 								140,
 								136,
-								132,
-								137
+								141
 							]
 						}
 					],
@@ -2238,14 +2324,14 @@
 						}
 					],
 					"indexSignature": {
-						"id": 142,
+						"id": 146,
 						"name": "__index",
 						"kind": 8192,
 						"kindString": "Index signature",
 						"flags": {},
 						"parameters": [
 							{
-								"id": 143,
+								"id": 147,
 								"name": "key",
 								"kind": 32768,
 								"flags": {},
@@ -2434,7 +2520,7 @@
 					},
 					{
 						"type": "reference",
-						"id": 144,
+						"id": 148,
 						"name": "TMetadataEvent"
 					}
 				]
@@ -3108,8 +3194,8 @@
 				78,
 				81,
 				84,
-				144,
-				130,
+				148,
+				134,
 				87,
 				47,
 				90,

@@ -60,6 +60,20 @@ Some fields are NOT sent by the client. They are OPTIONAL and populated by the i
 }
 ```
 
+### Units and normalisation
+
+`playhead` and `duration` are integer numbers of milliseconds. The JSON Schema keeps them as `"type": "number"` for backward compatibility with clients already in the wild, but conforming clients MUST emit them as integer milliseconds.
+
+- **Clients that send `sdk`.** A client MAY declare the SDK that produced the event with an optional top-level `sdk` field — `sdk: { name, version }`, where both `name` and `version` are required and no other keys are allowed (`name` is free text; the Eyevinn SDKs use `web`, `swift`, and `android`). A client that sends `sdk` MUST send `playhead` and `duration` in milliseconds, and the server trusts those values as-is and does NOT convert them.
+
+- **Legacy rule for events without `sdk` (server SHOULD).** For events that do not carry `sdk`, the server derives the unit from the request's HTTP `Origin` header: if an `Origin` header is present (any value, including the literal string `"null"`), the server multiplies `playhead` and `duration` by 1000 and rounds to the nearest integer; if no `Origin` header is present, the values are left unchanged. Negative sentinel values (e.g. `-1`, meaning "unknown") are never converted.
+
+- **Known limitation.** A browser client that already sends milliseconds but does NOT send `sdk` will be scaled ×1000 by the legacy rule above, because its requests carry an `Origin` header. Sending `sdk` is the way out: a client that declares `sdk` is trusted to send milliseconds and is never scaled.
+
+- **Handshake.** The eventsink's init response carries an `epasVersion`. A client sends `sdk` (and, for the Web SDK, milliseconds) only when the server's `epasVersion` is at least the version that introduces `sdk`. Servers older than that reject a request carrying `sdk` with HTTP `400`.
+
+- **Historical data.** Rows stored before normalisation stay mixed (some seconds, some milliseconds); there is no backfill.
+
 ### Flowchart
 
 ![](./flowchart/epas_flowchart.png)
