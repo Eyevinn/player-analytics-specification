@@ -36,6 +36,19 @@ export type TBaseEvent = {
   sessionId: UUID;
   shardId?: ShardId;
   /**
+   * OPTIONAL. Identifies the client SDK that produced the event.
+   *
+   * A client that sends `sdk` declares that it emits `playhead` and `duration`
+   * as integer milliseconds, so the server trusts those values and does not
+   * convert them. `name` is free text; the Eyevinn SDKs use `web`, `swift`,
+   * and `android`. Both `name` and `version` are required and no other keys
+   * are allowed.
+   */
+  sdk?: {
+    name: string;
+    version: string;
+  };
+  /**
    * OPTIONAL. Populated by the ingest server, NOT by the client.
    *
    * The server SHOULD derive this from the request's HTTP `Origin` header
