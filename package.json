@@ -2,9 +2,20 @@
   "name": "@eyevinn/player-analytics-specification",
   "version": "0.7.0",
   "description": "Eyevinn Player Analytics Specification",
+  "keywords": [
+    "epas",
+    "player analytics",
+    "video analytics",
+    "video player",
+    "qoe",
+    "quality of experience",
+    "streaming",
+    "specification"
+  ],
   "main": "index.js",
   "types": "./specification/typescript/index.ts",
   "repository": "git@github.com:Eyevinn/player-analytics-specification.git",
+  "homepage": "https://analytics.apps.osaas.io",
   "author": "Eyevinn Technology <work@eyevinn.se>",
   "contributors": [
     "Martin <901824+martinstark@users.noreply.github.com>",
