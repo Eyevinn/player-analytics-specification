@@ -1,8 +1,8 @@
 # Open Analytics Specification
 
-[Eyevinn Open Analytics](https://docs.osaas.io/osaas.wiki/Solution%3A-Eyevinn-Open-Analytics.html) is an open specification that defines a standard for implementing analytics in any media player. By implementing the specification, a player can send analytics data to an Open Analytics compatible backend. See [demo](https://analytics.demo.osaas.io/). Reference integrations are available for:
+[Eyevinn Open Analytics](https://docs.osaas.io/osaas.wiki/Solution%3A-Eyevinn-Open-Analytics.html) is an open specification that defines a standard for implementing analytics in any media player. By implementing the specification, a player can send analytics data to an Open Analytics compatible backend. See the [live demo](https://analytics.apps.osaas.io/demo?utm_source=github&utm_medium=readme&utm_campaign=analytics&utm_content=spec). Reference integrations are available for:
 
-**Hosted service:** Open Analytics is fully open and self-hostable. A managed pipeline (event sink, queue, worker, ClickHouse, and Grafana) is also available at [analytics.apps.osaas.io](https://analytics.apps.osaas.io).
+**Hosted service:** Open Analytics is fully open and self-hostable. A managed pipeline (event sink, queue, worker, ClickHouse, and Grafana) is also available at [analytics.apps.osaas.io](https://analytics.apps.osaas.io?utm_source=github&utm_medium=readme&utm_campaign=analytics&utm_content=spec).
 
 **Client**
 
